@@ -10,6 +10,10 @@ import ServicesCinematic from "./ServicesCinematic";
 import ThesisCinematic from "./ThesisCinematic";
 import WhyCinematic from "./WhyCinematic";
 import IndustriesCinematic from "./IndustriesCinematic";
+import TeamCinematic from "./TeamCinematic";
+import ProcessCinematic from "./ProcessCinematic";
+import TechStackCinematic from "./TechStackCinematic";
+import ProjectsCinematic from "./ProjectsCinematic";
 import StatsCinematic from "./StatsCinematic";
 import ContactCinematic from "./ContactCinematic";
 import FooterCinematic from "./FooterCinematic";
@@ -30,6 +34,10 @@ export default function ExperienceCinematic() {
         <ThesisCinematic />
         <WhyCinematic />
         <IndustriesCinematic />
+        <TeamCinematic />
+        <ProcessCinematic />
+        <TechStackCinematic />
+        <ProjectsCinematic />
         <StatsCinematic />
         <ContactCinematic />
       </main>

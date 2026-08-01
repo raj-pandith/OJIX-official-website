@@ -2,7 +2,15 @@
 import { motion, useReducedMotion } from "framer-motion";
 
 const COLS = [
-  ["SITEMAP", [["Services", "#services"], ["Industries", "#industries"], ["Manifesto", "#why"], ["Contact", "#contact"]]],
+  ["SITEMAP", [
+    ["Capabilities", "#services"],
+    ["Sectors", "#industries"],
+    ["Team", "#team"],
+    ["Process", "#process"],
+    ["Tech Stack", "#techstack"],
+    ["Projects", "#projects"],
+    ["Contact", "#contact"],
+  ]],
   ["CONNECT", [["LinkedIn", "#"], ["Twitter / X", "#"], ["GitHub", "#"], ["hello@ojix.com", "mailto:hello@ojix.com"]]],
   ["LEGAL", [["Privacy", "/privacy"], ["Terms", "/terms"]]],
 ];
