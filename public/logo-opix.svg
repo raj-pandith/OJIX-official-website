@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="OPIX logo">
+  <defs>
+    <!-- Deep purple gradient background -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3B1E6E"/>
+      <stop offset="50%" stop-color="#2A1454"/>
+      <stop offset="100%" stop-color="#1A0B3A"/>
+    </linearGradient>
+
+    <!-- Subtle radial highlight for depth -->
+    <radialGradient id="glow" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#6B3FB8" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#6B3FB8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Vertical streak pattern -->
+    <pattern id="streaks" x="0" y="0" width="6" height="400" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="1" height="400" fill="#FFFFFF" opacity="0.04"/>
+      <rect x="3" y="0" width="1" height="400" fill="#FFFFFF" opacity="0.02"/>
+    </pattern>
+
+    <!-- Letter gradient (white/cream) -->
+    <linearGradient id="letterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F5EFE0"/>
+    </linearGradient>
+
+    <!-- Subtle inner shine on the O -->
+    <linearGradient id="oShine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+    </linearGradient>
+
+    <!-- Corner radius -->
+    <clipPath id="rounded">
+      <rect x="0" y="0" width="400" height="400" rx="72" ry="72"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background tile -->
+  <g clip-path="url(#rounded)">
+    <rect width="400" height="400" fill="url(#bgGrad)"/>
+    <rect width="400" height="400" fill="url(#streaks)"/>
+    <rect width="400" height="400" fill="url(#glow)"/>
+
+    <!-- Soft top-left sheen -->
+    <polygon points="0,0 180,0 60,160 0,120" fill="#FFFFFF" opacity="0.05"/>
+  </g>
+
+  <!-- OPIX wordmark -->
+  <g fill="url(#letterGrad)" font-family="Inter Tight, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-weight="800" font-size="148" letter-spacing="-6" text-anchor="middle">
+    <text x="200" y="220">OPIX</text>
+  </g>
+
+  <!-- Subtle slash accent INSIDE the O -->
+  <g>
+    <circle cx="118" cy="180" r="4" fill="#7C3AED" opacity="0.9"/>
+  </g>
+
+  <!-- Outer hairline border -->
+  <rect x="0.5" y="0.5" width="399" height="399" rx="71.5" ry="71.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.08"/>
+</svg>

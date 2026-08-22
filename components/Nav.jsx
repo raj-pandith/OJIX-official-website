@@ -21,7 +21,8 @@ export default function Nav({ ready }) {
     <>
       <nav className={scrolled ? "scrolled" : ""} style={{ opacity: ready ? 1 : 0, transition: "opacity 400ms ease" }}>
         <a href="#top" className="logo">
-          <span className="bar" />OJIX
+          {/* <span className="bar" />OJIX */}
+          <img src="/logo-ojix.svg" alt="OJIX" />
         </a>
         <ul className="nav-links">
           {LINKS.map(([l, h]) => (

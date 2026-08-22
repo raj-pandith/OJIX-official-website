@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" role="img" aria-label="OJIX logo">
+  <defs>
+    <!-- Letter fill: bright white -->
+    <linearGradient id="letterFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F2EDE3"/>
+    </linearGradient>
+
+    <!-- J accent: purple/blue glow on the hook -->
+    <linearGradient id="jAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7B4FFF"/>
+      <stop offset="100%" stop-color="#4B8BFF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- O — thick ring (ellipse) -->
+  <g fill="none" stroke="url(#letterFill)" stroke-width="38">
+    <ellipse cx="108" cy="140" rx="78" ry="118"/>
+  </g>
+
+  <!-- J — vertical stem -->
+  <path d="M218 22 L218 196 C218 228 194 244 162 244 L162 244" fill="none" stroke="url(#letterFill)" stroke-width="38" stroke-linecap="round"/>
+  <!-- J — curved hook (accent gradient) -->
+  <path d="M218 196 C218 232 192 248 156 248 L148 248" fill="none" stroke="url(#jAccent)" stroke-width="38" stroke-linecap="round"/>
+
+  <!-- I — thick vertical bar -->
+  <rect x="294" y="22" width="40" height="236" rx="6" fill="url(#letterFill)"/>
+
+  <!-- X — two diagonal thick strokes -->
+  <g fill="url(#letterFill)">
+    <!-- Left-to-right bar -->
+    <polygon points="394,22 446,22 500,236 448,236"/>
+    <!-- Right-to-left bar -->
+    <polygon points="446,22 498,22 444,236 392,236"/>
+  </g>
+</svg>
