@@ -538,7 +538,9 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
   .nav-cta .arr { display: none; }
   .burger { width: 40px; height: 40px; }
 
-  .hero { padding: 100px 16px 60px; min-height: 92svh; }
+  .hero { padding: 140px 16px 60px; min-height: 92svh; }
+  .hero-meta { top: 72px; gap: 8px 16px; flex-wrap: wrap; font-size: 9px; letter-spacing: 0.14em; }
+  .hero-meta .left, .hero-meta .right { gap: 12px; flex-wrap: wrap; }
   .hero h1 { font-size: clamp(34px, 11vw, 48px); line-height: 0.98; margin-bottom: 24px; letter-spacing: -0.04em; }
   .hero h1 .ghost { -webkit-text-stroke: 1.25px var(--color-border-2); }
   .hero-foot { gap: 24px; margin-top: 20px; }
@@ -610,7 +612,8 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
 
 /* Landscape phones — keep hero comfortable */
 @media (max-height: 500px) and (orientation: landscape) {
-  .hero { min-height: 100svh; padding: 100px 24px 60px; }
+  .hero { min-height: 100svh; padding: 120px 24px 60px; }
+  .hero-meta { top: 76px; }
   .hero h1 { font-size: clamp(28px, 6vw, 48px); }
   .hero-ticks { margin-top: 32px; }
 }

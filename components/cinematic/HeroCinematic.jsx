@@ -23,9 +23,9 @@ export default function HeroCinematic({ ready }) {
       </div>
       <div className="hero-inner">
         <h1 id="hero-title">
-          <span className="ln"><motion.span {...lineAnim(ready, 0.2, reduced)} style={{ display: "inline-block" }}>Software</motion.span><span> </span><motion.span {...lineAnim(ready, 0.3, reduced)} style={{ display: "inline-block" }}><em>that ships.</em></motion.span></span>
-          <span className="ln"><motion.span {...lineAnim(ready, 0.4, reduced)} style={{ display: "inline-block" }}>Code</motion.span><span> </span><motion.span {...lineAnim(ready, 0.5, reduced)} style={{ display: "inline-block" }}><span className="cyan">that scales.</span></motion.span></span>
-          <span className="ln"><motion.span {...lineAnim(ready, 0.6, reduced)} style={{ display: "inline-block" }} className="ghost">AI</motion.span><span> </span><motion.span {...lineAnim(ready, 0.7, reduced)} style={{ display: "inline-block" }} className="ghost">that</motion.span><span> </span><motion.span {...lineAnim(ready, 0.8, reduced)} style={{ display: "inline-block" }} className="ghost">works.</motion.span></span>
+          <span className="ln"><motion.span {...lineAnim(ready, 0.2, reduced)} style={{ display: "inline-block" }}>Software</motion.span>{" "}<motion.span {...lineAnim(ready, 0.3, reduced)} style={{ display: "inline-block" }}><em>that ships.</em></motion.span></span>
+          <span className="ln"><motion.span {...lineAnim(ready, 0.4, reduced)} style={{ display: "inline-block" }}>Code</motion.span>{" "}<motion.span {...lineAnim(ready, 0.5, reduced)} style={{ display: "inline-block" }}><span className="cyan">that scales.</span></motion.span></span>
+          <span className="ln"><motion.span {...lineAnim(ready, 0.6, reduced)} style={{ display: "inline-block" }} className="ghost">AI</motion.span>{" "}<motion.span {...lineAnim(ready, 0.7, reduced)} style={{ display: "inline-block" }} className="ghost">that</motion.span>{" "}<motion.span {...lineAnim(ready, 0.8, reduced)} style={{ display: "inline-block" }} className="ghost">works.</motion.span></span>
         </h1>
         <motion.div
           initial={reduced ? false : { opacity: 0, y: 12 }}
