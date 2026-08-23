@@ -15,7 +15,7 @@ export default function TeamCinematic() {
   return (
     <section id="team">
       <div className="shell">
-        <span className="sec-num" aria-hidden="true"><span className="dot" /> 06 / TEAM</span>
+        <span className="sec-num" aria-hidden="true"><span className="dot" /> 03 / TEAM</span>
         <h2 className="sec">The <em>engineers</em> behind the work.</h2>
         <p className="sec-sub">Senior operators, not career managers. Every leader on this page ships code, reviews PRs, or runs infra — we don&apos;t build a layer between the client and the work.</p>
 

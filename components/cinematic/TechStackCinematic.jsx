@@ -27,7 +27,7 @@ export default function TechStackCinematic() {
   return (
     <section id="techstack" className="techstack-section">
       <div className="shell">
-        <span className="sec-num" aria-hidden="true"><span className="dot" /> 08 / TECH STACK</span>
+        <span className="sec-num" aria-hidden="true"><span className="dot" /> 05 / STACK</span>
         <h2 className="sec">The engines <em>behind our work.</em></h2>
         <p className="sec-sub">Production-grade tooling across architecture and intelligence layers — selected for reliability, not hype.</p>
 

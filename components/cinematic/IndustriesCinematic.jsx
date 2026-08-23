@@ -17,7 +17,7 @@ export default function IndustriesCinematic() {
       <div className="shell">
         <div className="section-head">
           <div>
-            <span className="sec-num"><span className="dot">●</span> 05 / INDUSTRIES</span>
+            <span className="sec-num"><span className="dot">●</span> 02 / SECTORS</span>
             <p className="label">Who we ship for</p>
           </div>
           <div>

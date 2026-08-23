@@ -39,7 +39,7 @@ export default function ContactCinematic() {
   return (
     <section id="contact" className="contact">
       <div className="shell">
-        <span className="sec-num" aria-hidden="true"><span className="dot" /> 10 / LET'S TALK</span>
+        <span className="sec-num" aria-hidden="true"><span className="dot" /> 07 / CONTACT</span>
         <div className="talk-grid">
           <div className="talk-left">
             <h2>Let&apos;s <em>talk.</em></h2>

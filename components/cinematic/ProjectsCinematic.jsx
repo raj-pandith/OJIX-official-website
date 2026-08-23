@@ -51,7 +51,7 @@ export default function ProjectsCinematic() {
   return (
     <section id="projects" className="projects-section">
       <div className="shell">
-        <span className="sec-num" aria-hidden="true"><span className="dot" /> 09 / PROJECTS</span>
+        <span className="sec-num" aria-hidden="true"><span className="dot" /> 06 / WORK</span>
         <div className="projects-head">
           <div>
             <h2 className="sec">Recent <em>work.</em></h2>

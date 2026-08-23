@@ -417,7 +417,9 @@ h2.sec .cyan { color: var(--color-accent-2); }
    FOOTER
    ============================================================ */
 footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-pad) 4vh; background: var(--color-bg); position: relative; z-index: 1; }
-.foot-grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 48px; max-width: var(--content-max); margin: 0 auto; }
+.foot-brand { max-width: var(--content-max); margin: 0 auto 48px; }
+.foot-brand p { color: var(--color-fg-3); font-size: 14px; line-height: 1.7; margin-top: 12px; max-width: 480px; }
+.foot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin: 0 auto; max-width: var(--max-width); padding: 0 var(--content-pad); }
 .foot-brand h3 { font: 500 18px 'Inter'; color: var(--color-fg); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; letter-spacing: 0.06em; }
 .foot-brand h3 .bar { width: 3px; height: 16px; background: var(--color-accent); box-shadow: 0 0 8px var(--color-accent-glow); }
 .foot-brand p { font-size: 13.5px; color: var(--color-fg-2); max-width: 280px; line-height: 1.6; }
@@ -425,14 +427,35 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
 .foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
 .foot-col a { text-decoration: none; color: var(--color-fg); font-size: 14px; transition: color 200ms ease; cursor: pointer; word-break: break-word; }
 .foot-col a:hover { color: var(--color-accent); }
-.foot-big {
-  font: 500 clamp(80px, 18vw, 280px)/0.85 'Inter Tight', 'Inter', sans-serif;
+.foot-big { display: inline-block;
+ font: 500 clamp(80px, 18vw, 280px)/0.85 'Inter Tight', 'Inter', sans-serif;
   letter-spacing: -0.02em; text-align: center;
   margin-top: 8vh; user-select: none; color: transparent;
   -webkit-text-stroke: 1.5px var(--color-border-2);
   overflow: hidden;
 }
 .foot-bottom { margin-top: 6vh; padding-top: 26px; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font: 400 11px 'JetBrains Mono', monospace; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-fg-3); max-width: var(--content-max); margin-left: auto; margin-right: auto; }
+.foot-big-wrapper { text-align: center; }
+.foot-line {
+ display: block;
+ width: 100%;
+ max-width: var(--content-max);
+ height: 8px;
+ background: var(--color-border-2);
+ border-radius: 4px;
+ overflow: hidden;
+ margin-top: 28px;
+ margin-bottom: 28px;
+}
+.foot-line-inner {
+ display: block;
+ height: 100%;
+ background: var(--color-accent);
+ transform-origin: left;
+ transform: scaleX(0);
+ box-shadow: 0 0 12px var(--color-accent-glow);
+}
+
 
 /* ============================================================
    PRELOADER — engineering boot sequence
@@ -484,9 +507,7 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
   .stack-card { grid-template-columns: 1fr; min-height: auto; gap: 24px; padding: 40px; }
   .stack-visual { display: none; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
-  .foot-grid { grid-template-columns: 1fr 1fr; }
-  .section-head { grid-template-columns: 1fr; }
-  .hero-meta { display: none; }
+ .foot-grid { grid-template-columns: repeat(3, 1fr); gap: 32px 24px; }
   .nav-links { gap: 18px; }
   .nav-links a { font-size: 11px; letter-spacing: 0.08em; }
   .nav-cta { padding: 9px 16px; font-size: 11px; }
@@ -504,7 +525,7 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
   .shell, .shell-wide { padding: 10vh var(--content-pad); }
   .thesis { padding: 12vh var(--content-pad); }
   .contact { padding: 10vh var(--content-pad); }
-  .foot-grid { grid-template-columns: 1fr 1fr; gap: 40px 24px; }
+  .foot-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 24px; }
 }
 
 /* Mobile (≤620px) */
@@ -566,7 +587,7 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
   .contact .small { font-size: 11px; line-height: 1.5; }
 
   footer { padding: 6vh 16px 3vh; }
-  .foot-grid { grid-template-columns: 1fr; gap: 36px; }
+ .foot-grid { grid-template-columns: 1fr; gap: 36px; }
   .foot-brand p { max-width: 100%; }
   .foot-big { font-size: clamp(60px, 22vw, 120px); -webkit-text-stroke: 1.2px var(--color-border-2); margin-top: 6vh; }
   .foot-bottom { font-size: 9px; letter-spacing: 0.14em; flex-direction: column; align-items: flex-start; gap: 8px; }
@@ -708,7 +729,7 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
 /* Arrow animations — paused until .in-view triggers on scroll */
 .arrow-ribbon {
   opacity: 0;
-  animation: fadeIn 0.6s ease 0.2s forwards;
+  animation: fadeIn 0.4s ease 0.1s forwards;
   animation-play-state: paused;
 }
 .process-row.in-view .arrow-ribbon {
@@ -718,7 +739,7 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
 .arrow-path {
   stroke-dasharray: 1200;
   stroke-dashoffset: 1200;
-  animation: drawArrow 1.6s var(--ease-out) 0.2s forwards;
+  animation: drawArrow 0.8s var(--ease-out) 0.1s forwards;
   animation-play-state: paused;
 }
 .process-row.in-view .arrow-path {
@@ -727,7 +748,7 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
 
 .arrow-head {
   opacity: 0;
-  animation: fadeIn 0.5s ease 1.4s forwards;
+  animation: fadeIn 0.4s ease 0.7s forwards;
   animation-play-state: paused;
 }
 .process-row.in-view .arrow-head {
@@ -740,9 +761,9 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
   animation: popIn 0.5s var(--ease-out) forwards;
   animation-play-state: paused;
 }
-.dot-1 { animation-delay: 0.6s; }
-.dot-2 { animation-delay: 1.0s; }
-.dot-3 { animation-delay: 1.4s; }
+.dot-1 { animation-delay: 0.3s; }
+.dot-2 { animation-delay: 0.5s; }
+.dot-3 { animation-delay: 0.7s; }
 .process-row.in-view .arrow-dot {
   animation-play-state: running;
 }
@@ -752,9 +773,9 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
   animation: fadeIn 0.3s ease forwards;
   animation-play-state: paused;
 }
-.dot-1-inner { animation-delay: 0.9s; }
-.dot-2-inner { animation-delay: 1.3s; }
-.dot-3-inner { animation-delay: 1.7s; }
+.dot-1-inner { animation-delay: 0.5s; }
+.dot-2-inner { animation-delay: 0.7s; }
+.dot-3-inner { animation-delay: 0.9s; }
 .process-row.in-view .arrow-dot-inner {
   animation-play-state: running;
 }
@@ -844,6 +865,14 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
 .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .project-tag { padding: 4px 12px; border: 1px solid var(--color-border); border-radius: var(--radius-pill);
   font: 400 11px 'JetBrains Mono', monospace; letter-spacing: 0.08em; color: var(--color-fg-3); }
+@media (max-width: 900px) {
+ .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+ .projects-grid { grid-template-columns: 1fr; }
+ .projects-head { flex-direction: column; align-items: flex-start; gap: 12px; }
+ .view-all-link { align-self: flex-start; }
+}
 
 /* ============================================================
    ENHANCED CONTACT — LET'S TALK
@@ -868,6 +897,14 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
 .pillar p { font-size: 13.5px; color: var(--color-fg-2); line-height: 1.55; }
 .talk-right { position: sticky; top: 100px; }
 
+@media (max-width: 980px) {
+ .talk-grid { grid-template-columns: 1fr; gap: 48px; }
+ .talk-right { position: static; }
+}
+@media (max-width: 620px) {
+ .consultation-card h4 { font-size: 18px; }
+ .consultation-card p { font-size: 13px; }
+}
 /* ============================================================
    A11Y UTILITIES
    ============================================================ */

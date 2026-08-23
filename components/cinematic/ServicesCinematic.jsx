@@ -17,7 +17,7 @@ export default function ServicesCinematic() {
       <div className="shell">
         <div className="section-head">
           <div>
-            <span className="sec-num"><span className="dot">●</span> 02 / SERVICES</span>
+            <span className="sec-num"><span className="dot">●</span> 01 / CAPABILITIES</span>
             <p className="label">What we ship</p>
           </div>
           <div>

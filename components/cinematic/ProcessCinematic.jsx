@@ -53,7 +53,7 @@ export default function ProcessCinematic() {
   return (
     <section id="process" className="process-section" ref={sectionRef}>
       <div className="shell">
-        <span className="sec-num" aria-hidden="true"><span className="dot" /> 07 / EXCELLENCE PATH</span>
+        <span className="sec-num" aria-hidden="true"><span className="dot" /> 04 / PROCESS</span>
         <h2 className="sec">Our tech <em>excellence path.</em></h2>
         <p className="sec-sub">A proven three-phase methodology that takes a concept to a production-ready platform - with clarity at every milestone.</p>
 
@@ -65,7 +65,7 @@ export default function ProcessCinematic() {
               style={{ height: p.height }}
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ duration: 0.5, delay: reduced ? 0 : 1.8 + i * 0.25 }}
+              transition={{ duration: 0.5, delay: reduced ? 0 : 0.5 + i * 0.12 }}
             >
               <div className="block-accent" aria-hidden="true" style={{ background: p.color }} />
               <div className="block-inner">
@@ -93,7 +93,7 @@ export default function ProcessCinematic() {
           className="process-footer"
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.8, delay: 2.8 }}
+          transition={{ duration: 0.6, delay: 1.0 }}
         >
           <span className="process-meta">// AVERAGE_PROTOTYPE_CYCLE: 6-8_WEEKS</span>
           <span className="process-meta">// GO_LIVE_SLA: PER_SCOPE_AGREEMENT</span>
