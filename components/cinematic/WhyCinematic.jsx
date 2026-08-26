@@ -18,8 +18,8 @@ const REASONS = [
   },
   {
     k: "[02] // SENIOR-ONLY",
-    title: "No interns on your project. Ever.",
-    body: "Every engineer who touches your code has shipped production systems before. We don't pad teams with juniors to grow our margins — we staff for outcome, not headcount. You talk to the people writing the code.",
+    title: "Experienced minds. Proven execution.",
+    body: "Every engineer on your project has real production experience. You work directly with the people building your product , experienced engineers focused on quality, ownership, and delivering results.",
     visual: (
       <svg viewBox="0 0 320 200" fill="none" stroke="var(--color-accent)" strokeWidth="1.25">
         <rect x="40" y="40" width="240" height="120" rx="2" />
@@ -53,10 +53,10 @@ export default function WhyCinematic() {
   const reduced = useReducedMotion();
   return (
     <section id="why">
-      <div className="shell">
+      <div className="shell" style={{paddingBottom:0}}>
         <div className="section-head">
-          <div>
-            <span className="sec-num"><span className="dot">●</span> 04 / MANIFESTO</span>
+          <div style={{ "display": "flex", flexDirection: "column", height: "100%", position: "relative", top: "2rem" }}>
+            <span className="sec-num"> // MANIFESTO</span>
             <p className="label">Why OJIX</p>
           </div>
           <div>

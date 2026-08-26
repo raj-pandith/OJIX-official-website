@@ -34,10 +34,10 @@ export default function ExperienceCinematic() {
         <ThesisCinematic />
         <WhyCinematic />
         <IndustriesCinematic />
-        <TeamCinematic />
+        {/* <TeamCinematic /> */}
         <ProcessCinematic />
         <TechStackCinematic />
-        <ProjectsCinematic />
+        {/* <ProjectsCinematic /> */}
         <StatsCinematic />
         <ContactCinematic />
       </main>

@@ -39,16 +39,18 @@ export default function ContactCinematic() {
   return (
     <section id="contact" className="contact">
       <div className="shell">
-        <span className="sec-num" aria-hidden="true"><span className="dot" /> 07 / CONTACT</span>
-        <div className="talk-grid">
+        <div style={{ "display": "flex", flexDirection: "column",alignItems:"start", height: "100%", position: "relative", top: "2rem" }}>
+          <span className="sec-num" aria-hidden="true"><span className="dot" /> 05 / CONTACT</span>
+        </div>
+        <div className="talk-grid" >
           <div className="talk-left">
             <h2>Let&apos;s <em>talk.</em></h2>
-            <p className="sub">Tell us about your project — whether it&apos;s AI-driven, tech-based, or non-tech. We&apos;ll map out the best path forward.</p>
+            <p className="sub">Tell us about your project , whether it&apos;s AI-driven, tech-based, or non-tech. We&apos;ll map out the best path forward.</p>
 
             <div className="consultation-card">
               <div className="consultation-label">// FREE_30_MIN_CALL</div>
               <h4>Book a Free Consultation</h4>
-              <p>Instant response. Senior engineer on the call. No pitch deck, no sales script — just a technical conversation about your problem.</p>
+              <p>Instant response. Senior engineer on the call. No pitch deck, no sales script ,just a technical conversation about your problem.</p>
               <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="btn btn-primary" data-cursor="Call">SCHEDULE_A_CALL <span className="arr" aria-hidden="true">→</span></a>
             </div>
 
@@ -63,9 +65,9 @@ export default function ContactCinematic() {
                   transition={{ duration: reduced ? 0 : 0.5, delay: reduced ? 0 : i * 0.1 }}
                 >
                   <span className="pillar-num" aria-hidden="true">[{p.num}]</span>
-                  <div>
-                    <h5>{p.title}</h5>
-                    <p>{p.desc}</p>
+                  <div style={{display:"flex",flexDirection:"column",justifyContent:"end"}}>
+                    <h5 style={{width:"60vh"}}>{p.title}</h5>
+                    <p style={{width:"60vh"}}>{p.desc}</p>
                   </div>
                 </motion.div>
               ))}

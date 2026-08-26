@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 const LINKS = [
   ["01", "Capabilities", "#services"],
   ["02", "Sectors", "#industries"],
-  ["03", "Team", "#team"],
-  ["04", "Process", "#process"],
-  ["05", "Stack", "#techstack"],
-  ["06", "Work", "#projects"],
-  ["07", "Contact", "#contact"],
+  // ["03", "Team", "#team"],
+  ["03", "Process", "#process"],
+  ["04", "Stack", "#techstack"],
+  // ["06", "Work", "#projects"],
+  ["05", "Contact", "#contact"],
 ];
 
 export default function NavCinematic({ ready }) {

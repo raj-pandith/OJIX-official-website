@@ -37,7 +37,7 @@ export default function ThesisCinematic() {
   return (
     <section ref={ref} className="thesis">
       <div className="shell">
-        <span className="sec-num" aria-hidden="true"><span className="dot" /> 03 / THESIS</span>
+        <span className="sec-num" aria-hidden="true"><span className="dot" />  // THESIS</span>
         <p className="thesis-text">
           {TEXT.map(([w, hl, kind], i) => (
             <Word key={i} word={w} highlight={hl} kind={kind} index={i} total={TEXT.length} progress={scrollYProgress} reduced={reduced} />

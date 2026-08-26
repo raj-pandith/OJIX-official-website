@@ -53,7 +53,7 @@ export default function ProcessCinematic() {
   return (
     <section id="process" className="process-section" ref={sectionRef}>
       <div className="shell">
-        <span className="sec-num" aria-hidden="true"><span className="dot" /> 04 / PROCESS</span>
+        <span className="sec-num" aria-hidden="true"><span className="dot" /> 03 / PROCESS</span>
         <h2 className="sec">Our tech <em>excellence path.</em></h2>
         <p className="sec-sub">A proven three-phase methodology that takes a concept to a production-ready platform - with clarity at every milestone.</p>
 

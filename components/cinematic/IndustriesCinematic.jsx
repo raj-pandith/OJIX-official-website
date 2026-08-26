@@ -16,7 +16,7 @@ export default function IndustriesCinematic() {
     <section id="industries">
       <div className="shell">
         <div className="section-head">
-          <div>
+          <div style={{ "display": "flex", flexDirection: "column", height: "100%", position: "relative", top: "2rem" }}>
             <span className="sec-num"><span className="dot">●</span> 02 / SECTORS</span>
             <p className="label">Who we ship for</p>
           </div>
