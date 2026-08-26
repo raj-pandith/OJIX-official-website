@@ -66,8 +66,8 @@ export default function ContactCinematic() {
                 >
                   <span className="pillar-num" aria-hidden="true">[{p.num}]</span>
                   <div style={{display:"flex",flexDirection:"column",justifyContent:"end"}}>
-                    <h5 style={{width:"60vh"}}>{p.title}</h5>
-                    <p style={{width:"60vh"}}>{p.desc}</p>
+                    <h5 style={{width:"100%"}}>{p.title}</h5>
+                    <p style={{width:"100%"}}>{p.desc}</p>
                   </div>
                 </motion.div>
               ))}

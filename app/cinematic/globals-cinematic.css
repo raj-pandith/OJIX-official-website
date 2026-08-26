@@ -494,7 +494,7 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
 @media (max-width: 1100px) {
   .nav-links { gap: 24px; }
   .nav-links a { font-size: 11px; }
-  .section-head { gap: 32px; }
+  .section-head { gap: 32px; grid-template-columns: 1fr 1fr; }
   .stack-card { gap: 40px; }
 }
 
@@ -514,6 +514,7 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
   .stat { border-left: none; padding-left: 0; border-top: 1px solid var(--color-border); padding-top: 24px; }
   .stat:nth-child(2) { border-top: none; padding-top: 0; }
   .stats-grid > .stat:nth-child(3) { border-top: 1px solid var(--color-border); padding-top: 24px; }
+ .team-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Mobile landscape / small tablet (≤820px) */
@@ -550,12 +551,20 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
   .hero-ticks { grid-template-columns: repeat(2, 1fr); gap: 20px 12px; margin-top: 56px; }
   .tick .num { font-size: 24px; }
   .tick .lbl { font-size: 9px; letter-spacing: 0.14em; }
+ .section-head { grid-template-columns: 1fr; margin-bottom: 40px; }
+ .section-head > div:first-child { top: 0; }
+ .team-grid { grid-template-columns: 1fr; }
+ .projects-grid { grid-template-columns: 1fr; }
+ .projects-head { flex-direction: column; align-items: flex-start; gap: 12px; }
+ .view-all-link { align-self: flex-start; }
+ .process-arrow { display: none; }
 
   .shell, .shell-wide { padding: 8vh 16px; }
   .thesis { padding: 10vh 16px; }
   .contact { padding: 8vh 16px; }
 
   .section-head { gap: 24px; margin-bottom: 40px; }
+ .section-head > div:first-child { top: 0 !important; }
   h2.sec { font-size: clamp(32px, 9vw, 56px); }
   .sec-sub { font-size: 16px; margin-top: 16px; }
 
@@ -591,7 +600,8 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
   footer { padding: 6vh 16px 3vh; }
  .foot-grid { grid-template-columns: 1fr; gap: 36px; }
   .foot-brand p { max-width: 100%; }
-  .foot-big { font-size: clamp(60px, 22vw, 120px); -webkit-text-stroke: 1.2px var(--color-border-2); margin-top: 6vh; }
+  .logo img { max-height: 28px; max-width: 120px; width: auto; height: auto; object-fit: contain; }
+ .foot-big-wrapper { overflow: hidden; }
   .foot-bottom { font-size: 9px; letter-spacing: 0.14em; flex-direction: column; align-items: flex-start; gap: 8px; }
 
   .m-menu { padding: 0 24px; }
@@ -659,7 +669,7 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
 /* ============================================================
    PROCESS / TECH EXCELLENCE PATH
    ============================================================ */
-.process-section { border-top: 1px solid var(--color-border); }
+.process-section { border-top: 1px solid var(--color-border); overflow: hidden; }
 .process-row {
   display: flex;
   align-items: flex-end;
