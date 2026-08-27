@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 650 310"
+    width="650"
+    height="310"
+    role="img"
+    aria-label="OJIX — Technology. Intelligence. Engineering.">
+
+    <rect width="650" height="310" fill="#0000" />
+
+    <rect x="60" y="45" width="326" height="25" fill="#C9662F" />
+
+    <text x="58" y="230"
+        font-family="Montserrat, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700"
+        font-size="136"
+        letter-spacing="-2"
+        fill="#FFFFFF"> OJI<tspan fill="#C9662F">X</tspan>
+    </text>
+
+    <text x="62" y="275"
+        font-family="Montserrat, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="500"
+        font-size="26"
+        letter-spacing="9.5"
+        fill="#7E9BBE"></text>
+
+</svg>

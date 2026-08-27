@@ -53,7 +53,7 @@ export default function PreloaderCinematic({ onDone }) {
           {/* {"OJIX".split("").map((c, i) => (
             <motion.span key={i} initial={reduced ? false : { y: "110%" }} animate={{ y: 0 }} transition={{ duration: reduced ? 0 : 0.7, delay: reduced ? 0 : i * 0.1, ease: [0.16, 1, 0.3, 1] }}>{c}</motion.span>
           ))} */}
-          <img src="/logo-ojix.png" alt="OJIX" height={90} weight={150} />
+          <img src="/ojix-primary-transparent-ondark.svg" alt="OJIX" height={260} width={550} />
         </div>
         <motion.div initial={reduced ? false : { width: 0 }} animate={{ width: "min(420px,72vw)" }} transition={{ duration: reduced ? 0 : 1.4, ease: [0.45, 0, 0.2, 1], delay: reduced ? 0 : 0.35 }} className="pre-bar"><i /></motion.div>
         <div className="pre-meta">
