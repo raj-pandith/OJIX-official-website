@@ -61,30 +61,36 @@ export default function ProcessCinematic() {
           {PHASES.map((p, i) => (
             <motion.div
               key={i}
-              className="process-block"
-              style={{ height: p.height }}
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ duration: 0.5, delay: reduced ? 0 : 0.5 + i * 0.12 }}
+              className="process-block-wrapper"
+              initial={{ scaleY: 0, opacity: 0 }}
+              animate={inView ? { scaleY: 1, opacity: 1 } : { scaleY: 0, opacity: 0 }}
+              transition={{ 
+                duration: 1.3, 
+                delay: reduced ? 0 : 0.3 + i * 0.25,
+                ease: [0.34, 1.56, 0.64, 1]
+              }}
+              style={{ height: p.height, transformOrigin: 'bottom' }}
             >
-              <div className="block-accent" aria-hidden="true" style={{ background: p.color }} />
-              <div className="block-inner">
-                <div className="process-header">
-                  <span className="process-num" aria-hidden="true">[{p.num}]</span>
-                  <span className="process-line" aria-hidden="true" style={{ background: p.color }} />
+              <div className="process-block" style={{ height: p.height }}>
+                <div className="block-accent" aria-hidden="true" style={{ background: p.color }} />
+                <div className="block-inner">
+                  <div className="process-header">
+                    <span className="process-num" aria-hidden="true">[{p.num}]</span>
+                    <span className="process-line" aria-hidden="true" style={{ background: p.color }} />
+                  </div>
+                  <h3>{p.title}</h3>
+                  <p className="process-sub">{p.subtitle}</p>
+                  <ol className="process-steps">
+                    {p.steps.map((s, si) => (
+                      <li key={si}>
+                        <span className="step-dot" aria-hidden="true" style={{ background: p.color }} />
+                        {s}
+                      </li>
+                    ))}
+                  </ol>
                 </div>
-                <h3>{p.title}</h3>
-                <p className="process-sub">{p.subtitle}</p>
-                <ol className="process-steps">
-                  {p.steps.map((s, si) => (
-                    <li key={si}>
-                      <span className="step-dot" aria-hidden="true" style={{ background: p.color }} />
-                      {s}
-                    </li>
-                  ))}
-                </ol>
+                <div className="block-gradient" aria-hidden="true" style={{ background: `linear-gradient(180deg, ${p.color}15, transparent 70%)` }} />
               </div>
-              <div className="block-gradient" aria-hidden="true" style={{ background: `linear-gradient(180deg, ${p.color}15, transparent 70%)` }} />
             </motion.div>
           ))}
         </div>
@@ -93,7 +99,7 @@ export default function ProcessCinematic() {
           className="process-footer"
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
+          transition={{ duration: 0.6, delay: reduced ? 0 : 1.5 }}
         >
           <span className="process-meta">// AVERAGE_PROTOTYPE_CYCLE: 6-8_WEEKS</span>
           <span className="process-meta">// GO_LIVE_SLA: PER_SCOPE_AGREEMENT</span>
