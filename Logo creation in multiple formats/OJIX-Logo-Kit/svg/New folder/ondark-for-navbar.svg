@@ -1,27 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 650 310"
-    width="650"
-    height="310"
-    role="img"
-    aria-label="OJIX — Technology. Intelligence. Engineering.">
+ 	<div className="foot-brand">  // this block 1
 
-    <rect width="650" height="310" fill="#0000" />
+        	<h3><span className="bar" />OJIX / SHIPPED</h3>
 
-    <rect x="60" y="45" width="326" height="25" fill="#C9662F" />
+        	<p>An independent software studio in Bengaluru. We exist because most agencies sell time, not outcomes and we wanted to be the team that does the opposite.</p>
 
-    <text x="58" y="230"
-        font-family="Montserrat, 'Helvetica Neue', Arial, sans-serif"
-        font-weight="700"
-        font-size="136"
-        letter-spacing="-2"
-        fill="#FFFFFF"> OJI<tspan fill="#C9662F">X</tspan>
-    </text>
+    	</div>
 
-    <text x="62" y="275"
-        font-family="Montserrat, 'Helvetica Neue', Arial, sans-serif"
-        font-weight="500"
-        font-size="26"
-        letter-spacing="9.5"
-        fill="#7E9BBE"></text>
 
-</svg>
+
+    <div className="foot-grid">
+
+        <div className="foot-col">  // this block 2
+
+        	<h3 className="foot-col-h">// SITEMAP</h3>
+
+        	<ul>{COLS[0][1].map(([l, href]) => <li key={l}><a href={href}>{l}</a></li>)}</ul>
+
+    	</div>
+
+    	
+
+        <div className="foot-col"> // this is block 3
+
+     		<h3 className="foot-col-h">// CONNECT</h3>
+
+     		<ul>{RIGHT_COLS[0][1].map(([l, href]) => <li key={l}><a href={href}>{l}</a></li>)}</ul>
+
+    	</div>
+
+    
+
+        <div className="foot-col">  // this is block 4
+
+    	  <h3 className="foot-col-h">// LEGAL</h3>
+
+    	  <ul>{RIGHT_COLS[1][1].map(([l, href]) => <li key={l}><a href={href}>{l}</a></li>)}</ul>
+
+        </div>
+
+
+
+    </div>
+
+
+
+ignore all className and give me new reposive css code
+
+for mobile view : block 1 (full row) then below block 2 | block 3 | block 4 (horizontall stack)
+
+for remaing view : 
+
+     block 1 | block 2 | block 3 | block 4  (all are horizontal stack) 

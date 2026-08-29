@@ -1,5 +1,6 @@
 "use client";
 import { motion, useReducedMotion } from "framer-motion";
+import "./css/FooterCinematic.css";
 
 const COLS = [
  ["SITEMAP", [
@@ -22,24 +23,26 @@ export default function FooterCinematic() {
  const reduced = useReducedMotion();
  return (
  <footer>
-    <div className="foot-brand">
-        <h3><span className="bar" />OJIX / SHIPPED</h3>
-        <p>An independent software studio in Bengaluru. We exist because most agencies sell time, not outcomes and we wanted to be the team that does the opposite.</p>
-    </div>
-    <div className="foot-grid">
+    <div className="footer-layout">
+        <div className="foot-brand">
+            <h3><span className="bar" />OJIX / SHIPPED</h3>
+            <p>An independent software studio in Bengaluru. We exist because most agencies sell time, not outcomes and we wanted to be the team that does the opposite.</p>
+        </div>
+        <div className="foot-grid">
+            <div className="foot-col">
+            <h3 className="foot-col-h">// SITEMAP</h3>
+            <ul>{COLS[0][1].map(([l, href]) => <li key={l}><a href={href}>{l}</a></li>)}</ul>
+        </div>
         <div className="foot-col">
-        <h3 className="foot-col-h">// SITEMAP</h3>
-        <ul>{COLS[0][1].map(([l, href]) => <li key={l}><a href={href}>{l}</a></li>)}</ul>
+         <h3 className="foot-col-h">// CONNECT</h3>
+         <ul>{RIGHT_COLS[0][1].map(([l, href]) => <li key={l}><a href={href}>{l}</a></li>)}</ul>
+        </div>
+     <div className="foot-col">
+        <h3 className="foot-col-h">// LEGAL</h3>
+        <ul>{RIGHT_COLS[1][1].map(([l, href]) => <li key={l}><a href={href}>{l}</a></li>)}</ul>
+     </div>
+     </div>
     </div>
-    <div className="foot-col">
-     <h3 className="foot-col-h">// CONNECT</h3>
-     <ul>{RIGHT_COLS[0][1].map(([l, href]) => <li key={l}><a href={href}>{l}</a></li>)}</ul>
-    </div>
- <div className="foot-col">
-    <h3 className="foot-col-h">// LEGAL</h3>
-    <ul>{RIGHT_COLS[1][1].map(([l, href]) => <li key={l}><a href={href}>{l}</a></li>)}</ul>
- </div>
- </div>
 
  <motion.div
  initial={reduced ? false : { opacity: 0, y: 40 }}
