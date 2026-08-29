@@ -106,6 +106,7 @@ nav.scrolled {
   text-decoration: none;
 }
 .logo .bar { width: 4px; height: 22px; background: var(--color-orange); border-radius: 1px; }
+.nav-logo-img { height: clamp(36px, 5vw, 52px); width: auto; object-fit: contain; }
 .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
 .nav-links a {
   font: 500 13px 'Roboto'; letter-spacing: 0.08em; text-transform: uppercase;
@@ -354,6 +355,7 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
    ============================================================ */
 .preloader { position: fixed; inset: 0; z-index: 9500; background: var(--color-background); display: flex; align-items: center; justify-content: center; flex-direction: column; }
 .pre-logo { font: 700 clamp(40px, 7vw, 72px) 'Roboto'; color: var(--color-primary); letter-spacing: 0.32em; text-indent: 0.32em; display: flex; overflow: hidden; }
+.pre-logo-img { height: clamp(130px, 22vw, 240px); max-width: min(calc(100vw - 48px), 600px); width: auto; object-fit: contain; margin: 0 auto; }
 .pre-logo span { display: inline-block; transform: translateY(110%); }
 .pre-meta { margin-top: 26px; display: flex; justify-content: space-between; width: min(380px, 70vw); }
 .pre-meta span { font: 500 11px 'Roboto'; color: var(--color-muted-fg); letter-spacing: 0.12em; text-transform: uppercase; }

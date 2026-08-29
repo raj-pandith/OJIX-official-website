@@ -25,7 +25,7 @@ export default function NavCinematic({ ready }) {
       <nav className={scrolled ? "scrolled" : ""} style={{ opacity: ready ? 1 : 0, transition: "opacity 600ms cubic-bezier(0.16,1,0.3,1)" }}>
         <a href="#top" className="logo">
           {/* <span className="bar" />OJIX<span className="slash">/</span><span className="tag">ENGINEERED</span> */}
-          <img src="/ondark-for-navbar.svg" alt="OJIX" height={60} />
+          <img src="/ondark-for-navbar.svg" alt="OJIX" className="nav-logo-img" />
         </a>
         <ul className="nav-links">
           {LINKS.map(([n, l, h]) => (
