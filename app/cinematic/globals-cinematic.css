@@ -261,7 +261,7 @@ section { position: relative; z-index: 1; }
 .shell { padding: 14vh var(--content-pad); max-width: var(--content-max); margin: 0 auto; }
 .shell-wide { padding: 14vh var(--content-pad); }
 
-.section-head { display: grid; grid-template-columns: 1fr 1.6fr; gap: 40px; margin-bottom: 56px; align-items: end; }
+.section-head { display: grid; grid-template-columns: 1fr 1.6fr; gap: 40px; margin-bottom: 56px; align-items: start; }
 .label {
   display: inline-flex; align-items: center; gap: 10px;
   font: 500 11px 'JetBrains Mono', monospace; letter-spacing: 0.2em; text-transform: uppercase;
