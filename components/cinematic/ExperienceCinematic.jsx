@@ -12,7 +12,7 @@ import WhyCinematic from "./WhyCinematic";
 import IndustriesCinematic from "./IndustriesCinematic";
 import TeamCinematic from "./TeamCinematic";
 import ProcessCinematic from "./ProcessCinematic";
-import TechStackCinematic from "./TechStackCinematic";
+import TechStackCinematic from "./TechStack/TechStackCinematic";
 import ProjectsCinematic from "./ProjectsCinematic";
 import StatsCinematic from "./StatsCinematic";
 import ContactCinematic from "./ContactCinematic";
