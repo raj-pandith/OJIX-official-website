@@ -900,10 +900,16 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
 }
 
 .tech-icon {
-  font-size: 28px;
-  line-height: 1;
   min-width: 40px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
 .tech-name {
@@ -990,7 +996,7 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
   color: var(--color-fg-2); transition: all 250ms var(--ease-out);
 }
 .stack-chip:hover { border-color: var(--color-border-accent); color: var(--color-fg); }
-.stack-icon { font-size: 16px; line-height: 1; opacity: 0.7; }
+.stack-icon { font-size: 24px; line-height: 1; opacity: 0.7; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; }
 @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .stack-track { animation: none; } }
 
@@ -1002,7 +1008,7 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
   padding: 8px 16px; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-sm);
   font: 400 13px 'Inter', sans-serif; color: var(--color-fg-2); transition: all 250ms var(--ease-out); }
 .stack-cat-chip:hover { border-color: var(--color-border-accent); color: var(--color-fg); background: var(--color-bg-3); }
-.stack-cat-chip .stack-icon { font-size: 14px; }
+.stack-cat-chip .stack-icon { font-size: 20px; width: 20px; height: 20px; }
 
 /* ============================================================
    PROJECTS

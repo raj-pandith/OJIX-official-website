@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
           rel="icon"
           href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230F172A'/%3E%3Crect x='30' y='10' width='4' height='44' fill='%23FF5C00'/%3E%3C/svg%3E"
         />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       </head>
       <body style={{ fontFamily: "'Roboto', system-ui, -apple-system, sans-serif" }}>
         {children}

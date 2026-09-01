@@ -10,19 +10,9 @@ import TechParticles from "./TechParticles";
 import TechConnection from "./TechConnection";
 import { technologies, orbits } from "./techData";
 
-function TechStackScene({ onMouseMove, hoveredTech, onHover, onLeave, reducedMotion, onNucleusPosition, inView }) {
+function TechStackScene({ onMouseMove, hoveredTech, onHover, onLeave, reducedMotion, onNucleusPosition }) {
   const groupRef = useRef();
   const nucleusRef = useRef(null);
-  const animationStartTime = useRef(0);
-  const isInViewRef = useRef(false);
-  
-  // Reset animation when section comes into view
-  if (inView && !isInViewRef.current) {
-    animationStartTime.current = 0;
-    isInViewRef.current = true;
-  } else if (!inView) {
-    isInViewRef.current = false;
-  }
   
   // Track current hovered tech position for connection line
   const hoveredTechPosition = useMemo(() => {
@@ -32,7 +22,7 @@ function TechStackScene({ onMouseMove, hoveredTech, onHover, onLeave, reducedMot
     for (const orbit of orbits) {
       if (orbit.technologies.includes(hoveredTech.name)) {
         const index = orbit.technologies.indexOf(hoveredTech.name);
-        const angle = index * (orbit.spacing || (Math.PI * 2 / orbit.technologies.length));
+        const angle = (Math.PI * 2 / orbit.technologies.length) * index;
         
         const x = orbit.radius * Math.cos(angle);
         const y = orbit.radius * Math.sin(angle) * Math.sin(orbit.tilt);
@@ -47,17 +37,11 @@ function TechStackScene({ onMouseMove, hoveredTech, onHover, onLeave, reducedMot
   useFrame((state) => {
     const time = state.clock.getElapsedTime();
     
-    // Set animation start time when in view
-    if (inView && animationStartTime.current === 0) {
-      animationStartTime.current = time;
-    }
-    
     // Entrance animation: pop from small to medium to big
-    if (groupRef.current && inView) {
+    if (groupRef.current) {
       if (!reducedMotion) {
-        const animationTime = time - animationStartTime.current;
         const entranceDuration = 2.0;
-        const progress = Math.min(animationTime / entranceDuration, 1);
+        const progress = Math.min(time / entranceDuration, 1);
         
         // Spring-like popping effect
         let scale;
@@ -183,7 +167,7 @@ export default function TechStack3D() {
       {hoveredTech && (
         <div className="tech-info-overlay">
           <div className="tech-info-card">
-            <span className="tech-icon" style={{ color: hoveredTech.color }}>{hoveredTech.icon}</span>
+             <div className="tech-icon" style={{ width: '32px', height: '32px', borderRadius: '50%', background: hoveredTech.color || '#00D4FF', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '14px', fontWeight: 'bold', flexShrink: 0 }}>{hoveredTech.name.charAt(0)}</div>
             <div>
               <h3 className="tech-name">{hoveredTech.name}</h3>
               <p className="tech-category">{hoveredTech.category}</p>

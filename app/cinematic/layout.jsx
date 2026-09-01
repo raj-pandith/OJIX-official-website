@@ -128,21 +128,24 @@ const jsonLd = {
 
 export default function CinematicLayout({ children }) {
   return (
-    <div
-      className={`${interTight.variable} ${inter.variable} ${jetbrains.variable}`}
-      style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
-    >
-      <a href="#main" className="skip">Skip to content</a>
-      <noscript>
-        <div style={{ padding: 24, background: "#0A0A0E", color: "#F5F5F4", textAlign: "center", fontFamily: "system-ui, sans-serif" }}>
-          The OJIX site requires JavaScript. Please enable JavaScript in your browser settings to view this page.
-        </div>
-      </noscript>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      {children}
-    </div>
+    <>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+      <div
+        className={`${interTight.variable} ${inter.variable} ${jetbrains.variable}`}
+        style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
+      >
+        <a href="#main" className="skip">Skip to content</a>
+        <noscript>
+          <div style={{ padding: 24, background: "#0A0A0E", color: "#F5F5F4", textAlign: "center", fontFamily: "system-ui, sans-serif" }}>
+            The OJIX site requires JavaScript. Please enable JavaScript in your browser settings to view this page.
+          </div>
+        </noscript>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </div>
+    </>
   );
 }

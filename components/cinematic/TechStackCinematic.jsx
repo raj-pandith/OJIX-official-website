@@ -2,22 +2,22 @@
 import { motion, useReducedMotion } from "framer-motion";
 
 const STACK = [
-  { name: "Python", icon: "🐍", category: "language" },
-  { name: "TypeScript", icon: "TS", category: "language" },
-  { name: "React", icon: "⚛", category: "framework" },
-  { name: "Next.js", icon: "N", category: "framework" },
-  { name: "Node.js", icon: "◇", category: "runtime" },
-  { name: "PostgreSQL", icon: "🐘", category: "database" },
-  { name: "Redis", icon: "◆", category: "database" },
-  { name: "Docker", icon: "🐳", category: "devops" },
-  { name: "Kubernetes", icon: "⎈", category: "devops" },
-  { name: "AWS", icon: "☁", category: "cloud" },
-  { name: "TensorFlow", icon: "⬡", category: "ai" },
-  { name: "LangGraph", icon: "⧉", category: "ai" },
-  { name: "Pinecone", icon: "△", category: "ai" },
-  { name: "GraphQL", icon: "◉", category: "api" },
-  { name: "Terraform", icon: "⬢", category: "devops" },
-  { name: "PyTorch", icon: "🔥", category: "ai" },
+  { name: "Python", icon: "devicon-python-plain", category: "language" },
+  { name: "TypeScript", icon: "devicon-typescript-plain", category: "language" },
+  { name: "React", icon: "devicon-react-plain", category: "framework" },
+  { name: "Next.js", icon: "devicon-nextjs-plain", category: "framework" },
+  { name: "Node.js", icon: "devicon-nodejs-plain", category: "runtime" },
+  { name: "PostgreSQL", icon: "devicon-postgresql-plain", category: "database" },
+  { name: "Redis", icon: "devicon-redis-plain", category: "database" },
+  { name: "Docker", icon: "devicon-docker-plain", category: "devops" },
+  { name: "Kubernetes", icon: "devicon-kubernetes-plain", category: "devops" },
+  { name: "AWS", icon: "devicon-amazonwebservices-plain-wordmark", category: "cloud" },
+  { name: "TensorFlow", icon: "devicon-tensorflow-plain", category: "ai" },
+  { name: "LangGraph", icon: "devicon-python-plain", category: "ai" },
+  { name: "Pinecone", icon: "devicon-python-plain", category: "ai" },
+  { name: "GraphQL", icon: "devicon-graphql-plain", category: "api" },
+  { name: "Terraform", icon: "devicon-terraform-plain", category: "devops" },
+  { name: "PyTorch", icon: "devicon-pytorch-plain", category: "ai" },
 ];
 
 const CATEGORIES = ["language", "framework", "runtime", "database", "devops", "cloud", "ai", "api"];
@@ -35,7 +35,7 @@ export default function TechStackCinematic() {
           <div className="stack-track">
             {[...STACK, ...STACK].map((t, i) => (
               <div key={i} className="stack-chip">
-                <span className="stack-icon">{t.icon}</span>
+                <i className={`stack-icon ${t.icon}`}></i>
                 <span className="stack-name">{t.name}</span>
               </div>
             ))}
@@ -59,7 +59,7 @@ export default function TechStackCinematic() {
                 <div className="stack-cat-items">
                   {items.map((item, ii) => (
                     <div key={ii} className="stack-cat-chip">
-                      <span className="stack-icon">{item.icon}</span>
+                      <i className={`stack-icon ${item.icon}`}></i>
                       {item.name}
                     </div>
                   ))}
