@@ -4,6 +4,8 @@
    Category: SaaS (General) — Enterprise B2B engineering firm
    ============================================================ */
 
+@import '../components/cookies/_cookie-styles.css';
+
 :root {
   /* Color system */
   --color-primary: #0F172A;
@@ -21,6 +23,11 @@
   --color-orange: #c9662f; /* OJIX brand mark color, used sparingly */
   --color-card: #FFFFFF;
   --color-card-hover: #FFFFFF;
+  /* Cookie component variables */
+  --color-bg-2: #FFFFFF;
+  --color-fg: #020617;
+  --color-fg-2: #334155;
+  --color-fg-3: #64748B;
 
   /* Spacing scale (4 / 8 / 16 / 24 / 32 / 48 / 64) */
   --space-xs: 4px;

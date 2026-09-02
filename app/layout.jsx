@@ -1,5 +1,6 @@
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import CookieWrapper from "@/components/cookies";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
       </head>
       <body style={{ fontFamily: "'Roboto', system-ui, -apple-system, sans-serif" }}>
         {children}
+        <CookieWrapper />
       </body>
     </html>
   );

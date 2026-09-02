@@ -1,5 +1,6 @@
 "use client";
 import { motion, useReducedMotion } from "framer-motion";
+import { useCookieConsent } from "../cookies/CookieConsent";
 
 const COLS = [
  ["Sitemap", [["Services", "#services"], ["Industries", "#industries"], ["Why OJIX", "#why"], ["Contact", "#contact"]]],
@@ -41,6 +42,7 @@ const SocialLink = ({ href, icon, label }) => (
 
 export default function Footer() {
  const reduced = useReducedMotion();
+ const cc = useCookieConsent();
  return (
  <footer>
  <div className="foot-grid">
@@ -60,9 +62,18 @@ export default function Footer() {
  <div key={h} className="foot-col">
  <h3 className="foot-col-h">{h}</h3>
  <ul>
- {links.map(([l, href]) => (
- <li key={l}><a href={href}>{l}</a></li>
- ))}
+ {links.map(([l, href]) => {
+ if (href === "__cookie_settings") {
+ return (
+ <li key={l}>
+ <a href="#" onClick={(e) => { e.preventDefault(); cc.openSettings(); }}>
+ {l}
+ </a>
+ </li>
+ );
+ }
+ return <li key={l}><a href={href}>{l}</a></li>;
+ })}
  </ul>
  </div>
  ))}
@@ -106,7 +117,8 @@ export default function Footer() {
  <div className="foot-bottom">
  <span>© 2026 OJIX. ALL RIGHTS RESERVED.</span>
  <span>WHERE CODE MEETS STEEL</span>
+ <a href="#" onClick={(e) => { e.preventDefault(); cc.openSettings(); }} style={{ color: "var(--color-muted-fg)", textDecoration: "none", cursor: "pointer", transition: "color 200ms ease" }} onMouseEnter={(e) => e.currentTarget.style.color = "var(--color-accent)"} onMouseLeave={(e) => e.currentTarget.style.color = "var(--color-muted-fg)"}}>Cookie Settings</a>
  </div>
- </footer>
- );
+</footer>
+);
 }
