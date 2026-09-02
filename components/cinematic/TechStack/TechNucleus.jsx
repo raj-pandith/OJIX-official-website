@@ -24,7 +24,7 @@ const TechNucleus = forwardRef(({ scale = 1, hoveredTech = null }, ref) => {
           radius * Math.sin(phi) * Math.sin(theta),
           radius * Math.cos(phi)
         ),
-        color: Math.random() > 0.6 ? '#FF5C00' : (Math.random() > 0.3 ? '#00D4FF' : '#FFFFFF'),
+        color: Math.random() > 0.6 ? '#c9662f' : (Math.random() > 0.3 ? '#00D4FF' : '#FFFFFF'),
         size: 0.03 + Math.random() * 0.05,
         speed: 0.5 + Math.random() * 1.5,
         offset: Math.random() * Math.PI * 2
@@ -123,7 +123,7 @@ const TechNucleus = forwardRef(({ scale = 1, hoveredTech = null }, ref) => {
       <mesh scale={scale * 1.1}>
         <sphereGeometry args={[1, 32, 32]} />
         <meshBasicMaterial 
-          color="#FF5C00" 
+          color="#c9662f" 
           transparent 
           opacity={0.15}
           blending={THREE.AdditiveBlending}
@@ -134,7 +134,7 @@ const TechNucleus = forwardRef(({ scale = 1, hoveredTech = null }, ref) => {
       <mesh ref={glowRef} scale={scale * 1.4}>
         <sphereGeometry args={[1, 32, 32]} />
         <meshBasicMaterial 
-          color="#FF5C00" 
+          color="#c9662f" 
           transparent 
           opacity={0.4}
           blending={THREE.AdditiveBlending}

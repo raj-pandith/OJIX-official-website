@@ -16,7 +16,7 @@ export default function Error({ error, reset }) {
           style={{
             font: "400 11px 'JetBrains Mono', monospace",
             letterSpacing: "0.2em",
-            color: "#FF5C00",
+            color: "#c9662f",
             marginBottom: 24,
           }}
         >

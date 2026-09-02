@@ -2,10 +2,10 @@
 import { motion, useReducedMotion } from "framer-motion";
 
 const TEAM = [
-  { num: "01", name: "Nitin Shimpi", role: "Group CEO & Co-founder", initials: "NS", hue: "#FF5C00" },
+  { num: "01", name: "Nitin Shimpi", role: "Group CEO & Co-founder", initials: "NS", hue: "#c9662f" },
   { num: "02", name: "Manjusha Madabushi", role: "CTO & Co-founder", initials: "MM", hue: "#00D4FF" },
   { num: "03", name: "Daljit Mirchandani", role: "Advisor", initials: "DM", hue: "#7C3AED" },
-  { num: "04", name: "Sanjoy Singh", role: "CEO — Tech Enterprise Business", initials: "SS", hue: "#FF5C00" },
+  { num: "04", name: "Sanjoy Singh", role: "CEO — Tech Enterprise Business", initials: "SS", hue: "#c9662f" },
   { num: "05", name: "Aniket Shaligram", role: "CEO — Startup Business", initials: "AS", hue: "#00D4FF" },
   { num: "06", name: "Pankaj Mendki", role: "Head of Emerging Technology", initials: "PM", hue: "#7C3AED" },
 ];

@@ -19,7 +19,7 @@ export default function PrivacyPage() {
       <header style={{ borderBottom: "1px solid #E2E8F0", padding: "20px 0" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <a href="/" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", color: "#0F172A" }}>
-            <span style={{ width: 4, height: 28, background: "#FF5C00" }} aria-hidden="true" />
+            <span style={{ width: 4, height: 28, background: "#c9662f" }} aria-hidden="true" />
             <span style={{ font: "500 18px 'Roboto'", letterSpacing: "0.05em" }}>OJIX</span>
           </a>
           <nav style={{ display: "flex", gap: 24, fontSize: 14 }}>

@@ -38,7 +38,7 @@ export default function HeroCinematic({ ready }) {
           </p>
           <div className="hero-ctas">
             <motion.a whileHover={reduced ? undefined : { y: -1 }} className="btn btn-primary" href="#services" data-cursor="View">VIEW_SERVICES <span className="arr" aria-hidden="true">→</span></motion.a>
-            <motion.a whileHover={reduced ? undefined : { y: -1 }} className="btn btn-secondary" href="#contact" data-cursor="Talk">START_PROJECT</motion.a>
+            <motion.a whileHover={reduced ? undefined : { y: -1 }} className="btn btn-secondary" href="#services" data-cursor="View">VIEW_PRODUCTS</motion.a>
           </div>
         </motion.div>
         <motion.div

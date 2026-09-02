@@ -25,7 +25,7 @@ export default function NotFound() {
             marginBottom: 24,
           }}
         >
-          <span style={{ color: "#FF5C00" }}>●</span> 404 / SIGNAL_LOST
+          <span style={{ color: "#c9662f" }}>●</span> 404 / SIGNAL_LOST
         </motion.div>
 
         <motion.h1

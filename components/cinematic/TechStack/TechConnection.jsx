@@ -66,7 +66,7 @@ export default function TechConnection({
           />
         </bufferGeometry>
         <lineBasicMaterial
-          color="#FF5C00"
+          color="#c9662f"
           transparent
           opacity={0.6}
           blending={THREE.AdditiveBlending}
@@ -87,7 +87,7 @@ export default function TechConnection({
         <mesh>
           <sphereGeometry args={[0.15, 8, 8]} />
           <meshBasicMaterial
-            color="#FF5C00"
+            color="#c9662f"
             transparent
             opacity={0.4}
             blending={THREE.AdditiveBlending}

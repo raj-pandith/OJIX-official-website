@@ -32,7 +32,7 @@ export default function NavCinematic({ ready }) {
             <li key={l}><a href={h}><span className="num">{n}</span>{l}</a></li>
           ))}
         </ul>
-        <a href="#contact" className="nav-cta" data-cursor="Go">START_PROJECT <span className="arr">→</span></a>
+        <a href="/login" className="nav-cta" data-cursor="Go">LOGIN <span className="arr" aria-hidden="true">→</span></a>
         <button className={`burger ${open ? "open" : ""}`} onClick={() => setOpen((v) => !v)} aria-label="Menu">
           <span /><span /><span />
         </button>

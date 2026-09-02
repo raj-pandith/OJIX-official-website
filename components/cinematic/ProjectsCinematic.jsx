@@ -7,7 +7,7 @@ const PROJECTS = [
     desc: "AI-powered SaaS platform for enterprise workflow automation and team orchestration.",
     year: "2025",
     tags: ["AI", "React", "Node.js", "PostgreSQL"],
-    gradient: "linear-gradient(135deg, #FF5C00 0%, #FF8F5C 100%)",
+    gradient: "linear-gradient(135deg, #c9662f 0%, #FF8F5C 100%)",
   },
   {
     title: "Stitched Health",
@@ -28,7 +28,7 @@ const PROJECTS = [
     desc: "Talent scouting platform using ML to identify and match engineering candidates at scale.",
     year: "2025",
     tags: ["ML", "TypeScript", "GraphQL", "Redis"],
-    gradient: "linear-gradient(135deg, #FF5C00 0%, #FFB347 100%)",
+    gradient: "linear-gradient(135deg, #c9662f 0%, #FFB347 100%)",
   },
   {
     title: "ExecMind",

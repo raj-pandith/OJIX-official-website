@@ -75,7 +75,7 @@ export default function TechOrbit({
  <mesh rotation={[orbit.tilt, 0, 0]}>
  <ringGeometry args={[orbit.radius - 0.02, orbit.radius + 0.02, 64]} />
  <meshBasicMaterial
- color={orbit.id % 2 === 0 ? "#00D4FF" : "#FF5C00"}
+ color={orbit.id % 2 === 0 ? "#00D4FF" : "#c9662f"}
  transparent
  opacity={0.15}
  side={THREE.DoubleSide}
@@ -95,7 +95,7 @@ export default function TechOrbit({
  </bufferGeometry>
  <pointsMaterial
  size={0.03}
- color={orbit.id % 2 === 0 ? "#00D4FF" : "#FF5C00"}
+ color={orbit.id % 2 === 0 ? "#00D4FF" : "#c9662f"}
  transparent
  opacity={0.4}
  blending={THREE.AdditiveBlending}

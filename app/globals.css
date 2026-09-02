@@ -18,7 +18,7 @@
   --color-border: #E2E8F0;
   --color-destructive: #DC2626;
   --color-ring: #0F172A;
-  --color-orange: #FF5C00; /* OJIX brand mark color, used sparingly */
+  --color-orange: #c9662f; /* OJIX brand mark color, used sparingly */
   --color-card: #FFFFFF;
   --color-card-hover: #FFFFFF;
 
@@ -241,7 +241,7 @@ h2.sec { font-size: var(--fs-h1); margin-bottom: 18px; max-width: 900px; }
 /* ============================================================
    THESIS (scroll-scrubbed text)
    ============================================================ */
-.thesis { background: var(--color-primary); color: #E8ECF1; padding: 16vh var(--content-pad); }
+.thesis { background: var(--color-primary); color: #E8ECF1; padding: 3vh var(--content-pad); }
 .thesis .label { color: var(--color-orange); }
 .thesis .label::before { background: var(--color-orange); }
 .thesis-text { font: 600 clamp(28px, 4vw, 56px)/1.3 'Roboto'; letter-spacing: -0.02em; color: #E8ECF1; max-width: 1100px; }

@@ -8,7 +8,7 @@ const PHASES = [
     title: "Pre-Engagement",
     subtitle: "From idea to signed scope",
     steps: ["Ideate & Execute", "Discovery", "Proposal", "Approval"],
-    color: "#FF5C00",
+    color: "#c9662f",
     height: 280,
   },
   {
@@ -176,7 +176,7 @@ function ArrowSVG({ inView, reduced }) {
     >
       <defs>
         <linearGradient id="arrow-grad" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0%" stopColor="#FF5C00" stopOpacity="0.5" />
+          <stop offset="0%" stopColor="#c9662f" stopOpacity="0.5" />
           <stop offset="50%" stopColor="#00D4FF" stopOpacity="0.6" />
           <stop offset="100%" stopColor="#7C3AED" stopOpacity="0.75" />
         </linearGradient>
@@ -185,7 +185,7 @@ function ArrowSVG({ inView, reduced }) {
           <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
         </filter>
         <linearGradient id="arrow-fill" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0%" stopColor="#FF5C00" stopOpacity="0.5" />
+          <stop offset="0%" stopColor="#c9662f" stopOpacity="0.5" />
           <stop offset="50%" stopColor="#00D4FF" stopOpacity="0.6" />
           <stop offset="100%" stopColor="#7C3AED" stopOpacity="0.75" />
         </linearGradient>
@@ -195,7 +195,7 @@ function ArrowSVG({ inView, reduced }) {
       <path d={arrowPath} fill="none" stroke="url(#arrow-grad)" strokeWidth="2.5" strokeLinecap="round" filter="url(#arrow-glow)" className="arrow-path" />
       <polygon points={`${tipX},${tipY} ${base1X},${base1Y} ${base2X},${base2Y}`} fill="#7C3AED" opacity="0.9" className="arrow-head" />
 
-      <circle cx={cx0} cy={top0} r="6" fill="#FF5C00" className="arrow-dot dot-1" />
+      <circle cx={cx0} cy={top0} r="6" fill="#c9662f" className="arrow-dot dot-1" />
       <circle cx={cx1} cy={top1} r="7" fill="#00D4FF" className="arrow-dot dot-2" />
       <circle cx={cx2} cy={top2} r="8" fill="#7C3AED" className="arrow-dot dot-3" />
       <circle cx={cx0} cy={top0} r="2.5" fill="var(--color-bg)" className="arrow-dot-inner dot-1" />

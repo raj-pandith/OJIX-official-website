@@ -3,7 +3,6 @@ import { useState, useId } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
 const ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
-const WHATSAPP = "https://wa.me/910000000000?text=Hi%20OJIX%20%E2%80%94%20I'd%20like%20to%20discuss%20a%20project.";
 const EMAIL = "hello@ojix.com";
 
 export default function Contact() {
@@ -45,7 +44,7 @@ export default function Contact() {
       {status === "ok" ? (
         <div className="cform" style={{ textAlign: "center" }}>
           <h3 style={{ fontSize: 28, marginBottom: 12 }}>Thanks — we&apos;ll be in touch.</h3>
-          <p style={{ color: "var(--color-secondary)" }}>A real human from OJIX will reply within 48 hours. For urgent stuff, ping us on WhatsApp.</p>
+          <p style={{ color: "var(--color-secondary)" }}>A real human from OJIX will reply within 48 hours.</p>
         </div>
       ) : (
         <motion.form
@@ -93,7 +92,6 @@ export default function Contact() {
             <button type="submit" className="btn btn-primary" disabled={status === "sending"} aria-busy={status === "sending"} data-cursor="Send">
               {status === "sending" ? "Sending..." : "Send inquiry"}
             </button>
-            <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" data-cursor="Chat">Or WhatsApp us</a>
           </div>
         </motion.form>
       )}
