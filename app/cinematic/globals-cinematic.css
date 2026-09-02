@@ -548,7 +548,7 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
   .hero-sub { font-size: 16px; line-height: 1.55; }
   .hero-ctas { flex-direction: column; align-items: stretch; width: 100%; }
   .hero-ctas .btn { justify-content: center; width: 100%; }
-  .hero-ticks { grid-template-columns: repeat(2, auto); justify-content: center; gap: 32px 20px; margin-top: 72px; }
+  .hero-ticks { grid-template-columns: repeat(4, auto); justify-content: center; gap: 20px 14px; margin-top: 72px; }
   .tick .num { font-size: 24px; }
   .tick .lbl { font-size: 9px; letter-spacing: 0.14em; }
  .section-head { grid-template-columns: 1fr; margin-bottom: 40px; }
@@ -609,8 +609,9 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
 /* Very small phones (≤380px) */
 @media (max-width: 380px) {
   .hero h1 { font-size: 32px; }
-  .hero-ticks { grid-template-columns: repeat(2, auto); justify-content: center; gap: 24px 16px; }
-  .tick .num { font-size: 22px; }
+  .hero-ticks { grid-template-columns: repeat(4, auto); justify-content: center; gap: 14px 10px; }
+  .tick .num { font-size: 16px; }
+  .tick .lbl { font-size: 7px; letter-spacing: 0.1em; }
   .contact h2 { font-size: 36px; }
   .cform { padding: 20px 16px; }
   .foot-big { font-size: 60px; }
