@@ -1,6 +1,6 @@
 import { Inter_Tight, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals-cinematic.css";
-import { SITE } from "@/lib/seo";
+import { SITE, PAGES } from "@/lib/seo";
 
 const interTight = Inter_Tight({
  subsets: ["latin"],
@@ -27,8 +27,8 @@ const SITE_URL = SITE.url;
 const PAGE_PATH = "/cinematic";
 
 export const metadata = {
- title: SITE.PAGES.home.title,
- description: SITE.PAGES.home.description,
+ title: PAGES.home.title,
+ description: PAGES.home.description,
  keywords: [
  "software product studio",
  "enterprise software development",
@@ -56,8 +56,8 @@ export const metadata = {
  locale: "en_IN",
  url: `${SITE_URL}${PAGE_PATH}`,
  siteName: SITE.name,
- title: SITE.PAGES.home.title,
- description: SITE.PAGES.home.description,
+ title: PAGES.home.title,
+ description: PAGES.home.description,
  images: [
  {
  url: "/og-cinematic.svg",
@@ -71,7 +71,7 @@ export const metadata = {
  twitter: {
  card: "summary_large_image",
  title: SITE.name,
- description: SITE.PAGES.home.description,
+ description: PAGES.home.description,
  images: ["/og-cinematic.svg"],
  creator: "@ojix",
  },
@@ -100,7 +100,7 @@ const jsonLdWebSite = {
  "@type": "WebSite",
  name: SITE.name,
  url: SITE_URL,
- description: SITE.PAGES.home.description,
+ description: PAGES.home.description,
  potentialAction: {
  "@type": "SearchAction",
  target: `${SITE_URL}/cinematic#search={search_term_string}`,
