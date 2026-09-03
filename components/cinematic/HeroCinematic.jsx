@@ -41,24 +41,6 @@ export default function HeroCinematic({ ready }) {
             <motion.a whileHover={reduced ? undefined : { y: -1 }} className="btn btn-secondary" href="#services" data-cursor="View">VIEW_PRODUCTS</motion.a>
           </div>
         </motion.div>
-        <motion.div
-          initial={reduced ? false : { opacity: 0 }}
-          animate={ready ? { opacity: 1 } : {}}
-          transition={{ duration: reduced ? 0 : 0.8, delay: reduced ? 0 : 1.15 }}
-          className="hero-ticks"
-        >
-          {[
-            [["50+", "orange"], "PROJECTS_SHIPPED"],
-            [["12", "plain"], "ENGINEERS"],
-            [["08", "plain"], "YRS_IN_PRODUCTION"],
-            [["99.9%", "plain"], "UPTIME_SLA"],
-          ].map(([[n, kind], l]) => (
-            <div key={l} className="tick">
-              <span className="num">{kind === "orange" ? <em>{n}</em> : n}</span>
-              <span className="lbl">{l}</span>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </header>
   );

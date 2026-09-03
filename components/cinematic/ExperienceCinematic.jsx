@@ -19,29 +19,29 @@ import ContactCinematic from "./ContactCinematic";
 import FooterCinematic from "./FooterCinematic";
 
 export default function ExperienceCinematic() {
-  const [loaded, setLoaded] = useState(false);
-  return (
-    <SmoothScroll>
-      <div className="grain" aria-hidden />
-      <div className="scanlines" aria-hidden />
-      <div className="vignette" aria-hidden />
-      <Cursor />
-      <AnimatePresence>{!loaded && <PreloaderCinematic key="pre" onDone={() => setLoaded(true)} />}</AnimatePresence>
-      <NavCinematic ready={loaded} />
-      <main id="main" style={{ position: "relative", zIndex: 1 }}>
-        <HeroCinematic ready={loaded} />
-        <ServicesCinematic />
-        <ThesisCinematic />
-        <WhyCinematic />
-        <IndustriesCinematic />
-        {/* <TeamCinematic /> */}
-        <ProcessCinematic />
-        <TechStackCinematic />
-        {/* <ProjectsCinematic /> */}
-        <StatsCinematic />
-        <ContactCinematic />
-      </main>
-      <FooterCinematic />
-    </SmoothScroll>
-  );
+ const [loaded, setLoaded] = useState(false);
+ return (
+ <SmoothScroll>
+ <div className="grain" aria-hidden />
+ <div className="scanlines" aria-hidden />
+ <div className="vignette" aria-hidden />
+ <Cursor />
+ <AnimatePresence>{!loaded && <PreloaderCinematic key="pre" onDone={() => setLoaded(true)} />}</AnimatePresence>
+ <NavCinematic ready={loaded} />
+ <main id="main" style={{ position: "relative", zIndex: 1 }}>
+ <HeroCinematic ready={loaded} />
+ <StatsCinematic />
+ <ServicesCinematic />
+ <ThesisCinematic />
+ <WhyCinematic />
+ <IndustriesCinematic />
+ {/* <TeamCinematic /> */}
+ <ProcessCinematic />
+ <TechStackCinematic />
+ {/* <ProjectsCinematic /> */}
+ <ContactCinematic />
+ </main>
+ <FooterCinematic />
+ </SmoothScroll>
+ );
 }
