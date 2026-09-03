@@ -1,9 +1,10 @@
 "use client";
 import { useState, useId } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { SITE } from "@/lib/seo";
 
 const ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
-const EMAIL = "hello@ojix.com";
+const EMAIL = SITE.email;
 
 export default function ContactCinematic() {
  const baseId = useId();

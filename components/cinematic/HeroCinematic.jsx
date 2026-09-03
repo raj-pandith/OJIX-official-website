@@ -37,7 +37,7 @@ export default function HeroCinematic({ ready }) {
  className="hero-foot"
  >
  <p className="hero-sub">
- OJIX is a <b>software product studio</b>. We build production web platforms, mobile apps, AI systems, and the DevOps to keep them running. One team. No handoffs.
+ OJIX is a <b>software product studio</b> engineering technology solutions for the digital enterprise. We combine AI, software engineering, cloud, and automation — one team, no handoffs, production-grade from day one.
  </p>
  <div className="hero-ctas">
  <motion.a whileHover={reduced ? undefined : { y: -1 }} className="btn btn-primary" href="#services" data-cursor="View">VIEW_SERVICES <span className="arr" aria-hidden="true">→</span></motion.a>

@@ -1,6 +1,6 @@
 "use client";
 import { motion, useReducedMotion } from "framer-motion";
-import "./css/FooterCinematic.css";
+import { SITE } from "@/lib/seo";
 
 const COLS = [
  ["SITEMAP", [
@@ -8,41 +8,49 @@ const COLS = [
  ["Sectors", "#industries"],
  ["Team", "#team"],
  ["Process", "#process"],
- ["Tech Stack", "#techstack"],
- ["Projects", "#projects"],
+ ["Stack", "#techstack"],
  ["Contact", "#contact"],
  ]],
 ];
 
 const RIGHT_COLS = [
- ["CONNECT", [["LinkedIn", "#"], ["Twitter / X", "#"], ["GitHub", "#"], ["hello@ojix.com", "mailto:hello@ojix.com"]]],
- ["LEGAL", [["Privacy", "/privacy"], ["Terms", "/terms"]]],
+ ["CONNECT", [
+ ["LinkedIn", SITE.social.linkedin],
+ ["Twitter / X", SITE.social.twitter],
+ ["GitHub", SITE.social.github],
+ ["Email", `mailto:${SITE.email}`],
+ ]],
+ ["REACH US", [
+ ["info@ojix.in", `mailto:${SITE.email}`],
+ [SITE.phone[0], `tel:${SITE.phone[0].replace(/ /g, "")}`],
+ [SITE.phone[1], `tel:${SITE.phone[1].replace(/ /g, "")}`],
+ ]],
 ];
 
 export default function FooterCinematic() {
  const reduced = useReducedMotion();
  return (
  <footer>
-    <div className="footer-layout">
-        <div className="foot-brand">
-            <h3><span className="bar" />OJIX / SHIPPED</h3>
-            <p>An independent software studio in Bengaluru. We exist because most agencies sell time, not outcomes and we wanted to be the team that does the opposite.</p>
-        </div>
-        <div className="foot-grid">
-            <div className="foot-col">
-            <h3 className="foot-col-h">// SITEMAP</h3>
-            <ul>{COLS[0][1].map(([l, href]) => <li key={l}><a href={href}>{l}</a></li>)}</ul>
-        </div>
-        <div className="foot-col">
-         <h3 className="foot-col-h">// CONNECT</h3>
-         <ul>{RIGHT_COLS[0][1].map(([l, href]) => <li key={l}><a href={href}>{l}</a></li>)}</ul>
-        </div>
-     <div className="foot-col">
-        <h3 className="foot-col-h">// LEGAL</h3>
-        <ul>{RIGHT_COLS[1][1].map(([l, href]) => <li key={l}><a href={href}>{l}</a></li>)}</ul>
-     </div>
-     </div>
-    </div>
+ <div className="footer-layout">
+ <div className="foot-brand">
+ <h3><span className="bar" />OJIX</h3>
+ <p>{SITE.tagline} Engineering technology solutions for the digital enterprise. Based in {SITE.location.city}, {SITE.location.country}.</p>
+ </div>
+ <div className="foot-grid">
+ <div className="foot-col">
+ <h3 className="foot-col-h">// SITEMAP</h3>
+ <ul>{COLS[0][1].map(([l, href]) => <li key={l}><a href={href}>{l}</a></li>)}</ul>
+ </div>
+ <div className="foot-col">
+ <h3 className="foot-col-h">// CONNECT</h3>
+ <ul>{RIGHT_COLS[0][1].map(([l, href]) => <li key={l}><a href={href}>{l}</a></li>)}</ul>
+ </div>
+ <div className="foot-col">
+ <h3 className="foot-col-h">// REACH US</h3>
+ <ul>{RIGHT_COLS[1][1].map(([l, href]) => <li key={l}><a href={href}>{l}</a></li>)}</ul>
+ </div>
+ </div>
+ </div>
 
  <motion.div
  initial={reduced ? false : { opacity: 0, y: 40 }}
@@ -87,7 +95,7 @@ export default function FooterCinematic() {
 
  <div className="foot-bottom">
  <span>© 2026 OJIX // ALL_RIGHTS_RESERVED</span>
- <span>// SHIP. SCALE. SHIP_AGAIN. //</span>
+ <span>// ENGINEERED FOR THE DIGITAL ENTERPRISE //</span>
  </div>
  </footer>
  );

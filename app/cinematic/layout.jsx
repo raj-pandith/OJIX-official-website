@@ -1,151 +1,183 @@
 import { Inter_Tight, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals-cinematic.css";
+import { SITE } from "@/lib/seo";
 
 const interTight = Inter_Tight({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter-tight",
-  display: "swap",
+ subsets: ["latin"],
+ weight: ["400", "500", "600"],
+ variable: "--font-inter-tight",
+ display: "swap",
 });
 
 const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-inter",
-  display: "swap",
+ subsets: ["latin"],
+ weight: ["400", "500"],
+ variable: "--font-inter",
+ display: "swap",
 });
 
 const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-jetbrains",
-  display: "swap",
+ subsets: ["latin"],
+ weight: ["400", "500"],
+ variable: "--font-jetbrains",
+ display: "swap",
 });
 
-const SITE_URL = "https://ojix.in";
+const SITE_URL = SITE.url;
 const PAGE_PATH = "/cinematic";
 
 export const metadata = {
-  title: "OJIX | Software that ships. Code that scales. AI that works.",
-  description: "OJIX is a software product studio building custom platforms, AI systems, cloud infrastructure, and DevOps. Senior-only engineering. Production-grade from day one. Based in Bengaluru, India.",
-  keywords: [
-    "software studio",
-    "custom platform development",
-    "AI systems",
-    "machine learning engineering",
-    "cloud infrastructure",
-    "DevOps",
-    "API development",
-    "data engineering",
-    "production engineering",
-    "OJIX",
-  ],
-  authors: [{ name: "OJIX" }],
-  creator: "OJIX",
-  publisher: "OJIX",
-  metadataBase: new URL(SITE_URL),
-  alternates: {
-    canonical: `${SITE_URL}${PAGE_PATH}`,
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    siteName: "OJIX",
-    title: "OJIX | Software that ships. Code that scales. AI that works.",
-    description: "Software product studio building custom platforms, AI systems, cloud infrastructure, and DevOps. Production-grade from day one.",
-    images: [
-      {
-        url: "/og-cinematic.svg",
-        width: 1200,
-        height: 630,
-        alt: "OJIX — Software Studio",
-        type: "image/svg+xml",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "OJIX | Software Studio",
-    description: "Custom platforms, AI systems, cloud infrastructure, and DevOps. Production-grade from day one.",
-    images: ["/og-cinematic.svg"],
-    creator: "@ojix",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  category: "technology",
+ title: SITE.PAGES.home.title,
+ description: SITE.PAGES.home.description,
+ keywords: [
+ "software product studio",
+ "enterprise software development",
+ "AI and machine learning solutions",
+ "cloud infrastructure services",
+ "DevOps and automation",
+ "digital product engineering",
+ "enterprise application development",
+ "custom software development",
+ "OCR and document intelligence",
+ "CRM and ERP development",
+ "Bengaluru",
+ "India",
+ "OJIX",
+ ],
+ authors: [{ name: "OJIX" }],
+ creator: "OJIX",
+ publisher: "OJIX",
+ metadataBase: new URL(SITE_URL),
+ alternates: {
+ canonical: `${SITE_URL}${PAGE_PATH}`,
+ },
+ openGraph: {
+ type: "website",
+ locale: "en_IN",
+ url: `${SITE_URL}${PAGE_PATH}`,
+ siteName: SITE.name,
+ title: SITE.PAGES.home.title,
+ description: SITE.PAGES.home.description,
+ images: [
+ {
+ url: "/og-cinematic.svg",
+ width: 1200,
+ height: 630,
+ alt: `${SITE.name} — ${SITE.tagline}`,
+ type: "image/svg+xml",
+ },
+ ],
+ },
+ twitter: {
+ card: "summary_large_image",
+ title: SITE.name,
+ description: SITE.PAGES.home.description,
+ images: ["/og-cinematic.svg"],
+ creator: "@ojix",
+ },
+ robots: {
+ index: true,
+ follow: true,
+ googleBot: {
+ index: true,
+ follow: true,
+ "max-image-preview": "large",
+ "max-snippet": -1,
+ },
+ },
+ category: "technology",
 };
 
 export const viewport = {
-  themeColor: "#0A0A0E",
-  colorScheme: "dark",
-  width: "device-width",
-  initialScale: 1,
+ themeColor: "#0A0A0E",
+ colorScheme: "dark",
+ width: "device-width",
+ initialScale: 1,
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "OJIX",
-  url: SITE_URL,
-  logo: `${SITE_URL}/og-cinematic.svg`,
-  description: "Software product studio building custom platforms, AI systems, cloud infrastructure, and DevOps.",
-  foundingDate: "2018",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Bengaluru",
-    addressCountry: "IN",
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "sales",
-    email: "hello@ojix.com",
-    availableLanguage: ["English"],
-  },
-  sameAs: [
-    "https://linkedin.com/company/ojix",
-    "https://twitter.com/ojix",
-    "https://github.com/ojix",
-  ],
-  knowsAbout: [
-    "Custom Software Development",
-    "Artificial Intelligence",
-    "Machine Learning",
-    "Cloud Infrastructure",
-    "DevOps",
-    "API Development",
-    "Data Engineering",
-  ],
+const jsonLdWebSite = {
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ name: SITE.name,
+ url: SITE_URL,
+ description: SITE.PAGES.home.description,
+ potentialAction: {
+ "@type": "SearchAction",
+ target: `${SITE_URL}/cinematic#search={search_term_string}`,
+ "query-input": "required name=search_term_string",
+ },
+};
+
+const jsonLdOrg = {
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ name: SITE.name,
+ url: SITE_URL,
+ description: "Engineering technology solutions for the digital enterprise.",
+ address: {
+ "@type": "PostalAddress",
+ addressLocality: SITE.location.city,
+ addressRegion: SITE.location.state,
+ addressCountry: "IN",
+ streetAddress: SITE.location.address,
+ },
+ contactPoint: [
+ {
+ "@type": "ContactPoint",
+ contactType: "sales",
+ email: SITE.email,
+ telephone: SITE.phone[0],
+ availableLanguage: ["English"],
+ },
+ ],
+ sameAs: [
+ SITE.social.linkedin,
+ SITE.social.twitter,
+ SITE.social.github,
+ ],
+};
+
+const jsonLdBreadcrumb = {
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ itemListElement: [
+ {
+ "@type": "ListItem",
+ position: 1,
+ name: "Home",
+ item: `${SITE_URL}/cinematic`,
+ },
+ ],
 };
 
 export default function CinematicLayout({ children }) {
-  return (
-    <>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-      <div
-        className={`${interTight.variable} ${inter.variable} ${jetbrains.variable}`}
-        style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
-      >
-        <a href="#main" className="skip">Skip to content</a>
-        <noscript>
-          <div style={{ padding: 24, background: "#0A0A0E", color: "#F5F5F4", textAlign: "center", fontFamily: "system-ui, sans-serif" }}>
-            The OJIX site requires JavaScript. Please enable JavaScript in your browser settings to view this page.
-          </div>
-        </noscript>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        {children}
-      </div>
-    </>
-  );
+ return (
+ <>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+ <div
+ className={`${interTight.variable} ${inter.variable} ${jetbrains.variable}`}
+ style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
+ >
+ <a href="#main" className="skip">Skip to content</a>
+ <noscript>
+ <div style={{ padding: 24, background: "#0A0A0E", color: "#F5F5F4", textAlign: "center", fontFamily: "system-ui, sans-serif" }}>
+ The OJIX site requires JavaScript. Please enable JavaScript in your browser settings to view this page.
+ </div>
+ </noscript>
+ <script
+ type="application/ld+json"
+ dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
+ />
+ <script
+ type="application/ld+json"
+ dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOrg) }}
+ />
+ <script
+ type="application/ld+json"
+ dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+ />
+ {children}
+ </div>
+ </>
+ );
 }
