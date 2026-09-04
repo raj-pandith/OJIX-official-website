@@ -1,12 +1,16 @@
 "use client";
 import { useRef, useMemo, forwardRef } from "react";
 import { useFrame } from "@react-three/fiber";
+import { useTexture } from "@react-three/drei";
 import * as THREE from "three";
 
 const TechNucleus = forwardRef(({ scale = 1, hoveredTech = null }, ref) => {
 	const nucleusRef = useRef();
 	const particlesRef = useRef();
 	const glowRef = useRef();
+
+	const logoTexture = useTexture("/ojix-primary-transparent-ondark.svg");
+	logoTexture.colorSpace = THREE.SRGBColorSpace;
 
 	// Create nucleus particles
 	const nucleusParticles = useMemo(() => {
@@ -34,6 +38,9 @@ const TechNucleus = forwardRef(({ scale = 1, hoveredTech = null }, ref) => {
 		return particles;
 	}, []);
 
+	// Logo sprite ref
+	const logoSpriteRef = useRef();
+
 	// Create surface energy particles
 	const surfaceParticles = useMemo(() => {
 		const particles = [];
@@ -57,11 +64,19 @@ const TechNucleus = forwardRef(({ scale = 1, hoveredTech = null }, ref) => {
 
 	useFrame((state) => {
 		const time = state.clock.getElapsedTime();
+		const { viewport } = state;
 
 		// Rotate nucleus
 		if (nucleusRef.current) {
 			nucleusRef.current.rotation.y = time * 0.1;
 			nucleusRef.current.rotation.x = Math.sin(time * 0.05) * 0.1;
+		}
+
+		// Responsive logo scale preserving aspect ratio
+		const logoScale = Math.min(viewport.width, viewport.height) * 0.12;
+		if (logoSpriteRef.current && logoTexture.image) {
+			const aspect = logoTexture.image.width / logoTexture.image.height;
+			logoSpriteRef.current.scale.set(logoScale * aspect, logoScale, 1);
 		}
 
 		// Pulse effect
@@ -109,15 +124,15 @@ const TechNucleus = forwardRef(({ scale = 1, hoveredTech = null }, ref) => {
 
 	return (
 		<group ref={nucleusRef}>
-			{/* Core sphere — fully transparent, just a geometric placeholder */}
-			<mesh scale={scale}>
-				<sphereGeometry args={[1, 32, 32]} />
-				<meshBasicMaterial
+			{/* OJIX Logo - billboard sprite with depth test so planets overlay it */}
+			<sprite ref={logoSpriteRef} renderOrder={0}>
+				<spriteMaterial
+					map={logoTexture}
 					transparent
-					opacity={0}
+					depthTest
 					depthWrite={false}
 				/>
-			</mesh>
+			</sprite>
 
 			{/* Inner glow */}
 			<mesh scale={scale * 1.1}>

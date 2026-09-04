@@ -6,7 +6,7 @@ const SERVICES = [
  num: "01",
  title: "AI & Intelligent Solutions",
  desc: "AI-powered applications, GenAI and LLM integration, intelligent document processing, OCR, computer vision, intelligent search, and AI-enabled decision support.",
- icon: "M12 2a10 10 0 1 0 20 10 10 0 0 0-20 0z M12 2v4M12 18v4M4 12h4M16 12h4",
+ icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z",
  },
  {
  num: "02",
@@ -30,7 +30,7 @@ const SERVICES = [
  num: "05",
  title: "Digital Product Engineering",
  desc: "Full product lifecycle from discovery through technical architecture, UI/UX, MVP development, full-scale product engineering, and continuous enhancement.",
- icon: "M3 3v18h18V3H3zM9 9h2v2H9zM13 9h2v2M9 13h2v2M13 13h2v2M5 7l2 2 2-2m3 2 2-2m3-8 8-2-2",
+ icon: "M3 3v18h18V3H3zM9 9h2v2H9zM13 9h2v2M9 13h2v2M13 13h2v2",
  },
  {
  num: "06",

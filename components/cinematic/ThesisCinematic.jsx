@@ -35,7 +35,7 @@ export default function ThesisCinematic() {
   const reduced = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 0.8", "end 0.3"] });
   return (
-    <section ref={ref} className="thesis">
+    <section ref={ref} className="thesis" style={{ padding: "0" }}>
       <div className="shell">
         <span className="sec-num" aria-hidden="true"><span className="dot" />  // THESIS</span>
         <p className="thesis-text">

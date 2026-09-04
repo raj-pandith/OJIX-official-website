@@ -108,12 +108,6 @@ export const technologies = [
     color: "#231F20"
   },
   {
-    name: "C++",
-    category: "Language",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
-    color: "#00599C"
-  },
-  {
     name: "Figma",
     category: "Design",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
@@ -173,7 +167,7 @@ export const orbits = [
   {
     id: 1,
     name: "Frontend",
-    technologies: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
+    technologies: ["React", "Next.js", "TypeScript", "JavaScript"],
     radius: 4.0,
     speed: 18,
     tilt: 0.15,
@@ -213,7 +207,7 @@ export const orbits = [
   {
     id: 5,
     name: "AI & Development",
-    technologies: ["Git", "GitHub", "C++", "Figma", "TensorFlow", "PyTorch", "LangGraph", "Pinecone", "GraphQL"],
+    technologies: ["Git", "GitHub", "Figma", "TensorFlow", "PyTorch", "Pinecone"],
     radius: 10.0,
     speed: 38,
     tilt: 0.1,
