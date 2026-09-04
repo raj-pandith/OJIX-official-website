@@ -176,6 +176,10 @@ nav.scrolled {
 .m-menu a { font: 500 clamp(22px, 6vw, 36px)/1.2 'Inter'; color: var(--color-fg); text-decoration: none;
   border-bottom: 1px solid var(--color-border); padding: 14px 4px; display: flex; justify-content: space-between; align-items: center; }
 .m-menu a em { font: 400 11px 'JetBrains Mono', monospace; color: var(--color-accent); font-style: normal; }
+.m-menu .m-menu-cta { color: var(--color-accent); margin-left: auto; }
+.m-close { position: absolute; top: 20px; right: 20px; width: 44px; height: 44px; background: rgba(10,10,14,0.7); border: 1px solid var(--color-border-2); border-radius: 50%; color: var(--color-fg); font-size: 24px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: all 200ms ease; }
+.m-close:hover { background: var(--color-bg-3); border-color: var(--color-accent); color: var(--color-accent); }
+.m-close:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
 
 /* ============================================================
    HERO
@@ -1488,4 +1492,4 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .pc-dot.active{background:var(--color-accent);box-shadow:0 0 8px var(--color-accent-glow);width:24px;border-radius:var(--radius-pill)}
 .pc-dot:hover:not(.active){background:var(--color-fg-3)}
 @media(max-width:820px){.pc-slide{grid-template-columns:1fr}.pc-image{min-height:200px}.pc-content{max-height:none;padding:28px 24px}.pc-initial{width:52px;height:52px;font-size:24px}.pc-panel{max-height:90vh}}
-@media(max-width:480px){.pc-backdrop{padding:12px}.pc-panel{max-height:94vh}.pc-image{min-height:180px;padding:28px 20px 20px}.pc-content{padding:20px 18px}.pc-nav{padding:14px 16px}.pc-arrow{width:36px;height:36px;font-size:16px}.pc-close{top:10px;right:10px;width:36px;height:36px;font-size:20px}}
+@media(max-width:480px){.pc-backdrop{padding:12px}.pc-panel{max-height:calc(100vh - 84px)}.pc-image{min-height:140px;padding:24px 18px 18px}.pc-content{padding:20px 18px}.pc-nav{padding:14px 16px}.pc-arrow{width:36px;height:36px;font-size:16px}.pc-close{top:10px;right:10px;width:36px;height:36px;font-size:20px}}

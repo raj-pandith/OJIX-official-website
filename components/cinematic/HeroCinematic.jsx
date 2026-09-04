@@ -13,7 +13,7 @@ export default function HeroCinematic({ ready }) {
  const reduced = useReducedMotion();
  const [showProducts, setShowProducts] = useState(false);
  return (
- <header id="top" className="hero">
+ <><header id="top" className="hero">
  <div className="hero-meta">
  <div className="left">
  <span><span className="dot" aria-hidden="true" />SYS_OJIX // LIVE</span>
@@ -45,7 +45,8 @@ export default function HeroCinematic({ ready }) {
  </div>
  </motion.div>
  </div>
- <ProductCarousel open={showProducts} onClose={() => setShowProducts(false)} />
  </header>
+ <ProductCarousel open={showProducts} onClose={() => setShowProducts(false)} />
+ </>
  );
 }

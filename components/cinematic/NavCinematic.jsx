@@ -31,13 +31,13 @@ export default function NavCinematic({ ready }) {
  <li key={l}><a href={h}><span className="num">{n}</span>{l}</a></li>
  ))}
  </ul>
- <a href="/login" className="nav-cta" data-cursor="Go">LOGIN <span className="arr" aria-hidden="true">→</span></a>
  <button className={`burger ${open ? "open" : ""}`} onClick={() => setOpen((v) => !v)} aria-label="Menu">
  <span /><span /><span />
  </button>
  </nav>
  <div className={`m-menu ${open ? "open" : ""}`}>
  {LINKS.map(([n, l, h]) => <a key={l} href={h} onClick={() => setOpen(false)}>{l}<em>{n}</em></a>)}
+ <a href="/login" className="m-menu-cta" data-cursor="Go">Login</a>
  </div>
  </>
  );
