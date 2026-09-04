@@ -11,7 +11,7 @@ import TechConnection from "./TechConnection";
 import { technologies, orbits } from "./techData";
 
 const ZOOM_IN_POS = new THREE.Vector3(0, 5, 14);
-const ZOOM_OUT_POS = new THREE.Vector3(0, 5, 30);
+const ZOOM_OUT_POS = new THREE.Vector3(0, 5, 42);
 
 function CameraZoom({ isVisible, userInteracting }) {
  const { camera } = useThree();
@@ -122,7 +122,7 @@ export default function TechStack3D() {
  return (
  <div className="tech-stack-3d-container">
  <Canvas
- camera={{ position: [0, 5, 30], fov: 50 }}
+ camera={{ position: [0, 5, 42], fov: 50 }}
  gl={{
  antialias: true,
  alpha: true,
@@ -142,7 +142,7 @@ export default function TechStack3D() {
  enableZoom
  enablePan
  minDistance={8}
- maxDistance={30}
+  maxDistance={42}
  maxPolarAngle={Math.PI / 2}
  minPolarAngle={Math.PI / 6}
  onStart={() => { userInteracting.current = true; }}
@@ -161,24 +161,11 @@ export default function TechStack3D() {
  {hoveredTech && (
  <div className="tech-info-overlay">
  <div className="tech-info-card">
- <div
- className="tech-icon"
- style={{
- width: "32px",
- height: "32px",
- borderRadius: "50%",
- background: hoveredTech.color || "#00D4FF",
- display: "flex",
- alignItems: "center",
- justifyContent: "center",
- color: "#fff",
- fontSize: "14px",
- fontWeight: "bold",
- flexShrink: 0
- }}
- >
- {hoveredTech.name.charAt(0)}
- </div>
+	<img
+		src={hoveredTech.icon}
+		alt={hoveredTech.name}
+		className="tech-icon"
+	/>
  <div>
  <h3 className="tech-name">{hoveredTech.name}</h3>
  <p className="tech-category">{hoveredTech.category}</p>

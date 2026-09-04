@@ -72,11 +72,10 @@ const TechNucleus = forwardRef(({ scale = 1, hoveredTech = null }, ref) => {
 			nucleusRef.current.rotation.x = Math.sin(time * 0.05) * 0.1;
 		}
 
-		// Responsive logo scale preserving aspect ratio
-		const logoScale = Math.min(viewport.width, viewport.height) * 0.12;
+		// Logo scale matches nucleus sphere (radius 1.0)
 		if (logoSpriteRef.current && logoTexture.image) {
 			const aspect = logoTexture.image.width / logoTexture.image.height;
-			logoSpriteRef.current.scale.set(logoScale * aspect, logoScale, 1);
+			logoSpriteRef.current.scale.set(scale * aspect, scale, 1);
 		}
 
 		// Pulse effect
