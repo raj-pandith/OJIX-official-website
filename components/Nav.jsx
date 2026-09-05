@@ -29,8 +29,7 @@ export default function Nav({ ready }) {
  <li key={l}><a href={h}>{l}</a></li>
  ))}
  </ul>
- <a href="/cinematic" className="nav-cta" data-cursor="View">Cinematic</a>
- <a href="#contact" className="nav-cta" data-cursor="Go">Get in touch</a>
+ <a href="/login" className="nav-cta" data-cursor="Go">Login</a>
  <button className={`burger ${open ? "open" : ""}`} onClick={() => setOpen((v) => !v)} aria-label="Menu">
  <span /><span /><span />
  </button>
@@ -40,6 +39,7 @@ export default function Nav({ ready }) {
  {LINKS.map(([l, h]) => (
  <a key={l} href={h} onClick={() => setOpen(false)}>{l}<em>{h.replace("#", "")}</em></a>
  ))}
+ <a href="/login" className="m-menu-cta" onClick={() => setOpen(false)}>Login</a>
  </div>
  </>
  );
