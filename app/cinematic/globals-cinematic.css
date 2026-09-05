@@ -148,6 +148,14 @@ nav.scrolled {
 }
 .nav-links a .num { color: var(--color-fg-3); font-size: 10px; }
 .nav-links a:hover { color: var(--color-fg); }
+.nav-links a.active-link { color: var(--color-accent); }
+.nav-links a.active-link .num { color: var(--color-accent); opacity: 0.7; }
+.nav-links a.active-link::after {
+ content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px;
+ background: var(--color-accent); box-shadow: 0 0 10px var(--color-accent-glow);
+ transform-origin: left; animation: underline-in 800ms var(--ease-out) forwards;
+}
+@keyframes underline-in { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 .nav-cta {
   font: 500 12px 'JetBrains Mono', monospace; letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--color-bg); text-decoration: none;
