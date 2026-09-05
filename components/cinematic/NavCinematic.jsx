@@ -24,13 +24,14 @@ export default function NavCinematic({ ready }) {
  <>
  <nav className={scrolled ? "scrolled" : ""} style={{ opacity: ready ? 1 : 0, transition: "opacity 600ms cubic-bezier(0.16,1,0.3,1)" }}>
  <a href="#top" className="logo">
- <img src="/ondark-for-navbar.svg" alt="OJIX" className="nav-logo-img" />
+ <img src="/ojix-primary-transparent-ondark.svg" alt="OJIX" className="nav-logo-img" />
  </a>
  <ul className="nav-links">
  {LINKS.map(([n, l, h]) => (
  <li key={l}><a href={h}><span className="num">{n}</span>{l}</a></li>
  ))}
  </ul>
+ <a href="/login" className="nav-cta" data-cursor="Go">Login</a>
  <button className={`burger ${open ? "open" : ""}`} onClick={() => setOpen((v) => !v)} aria-label="Menu">
  <span /><span /><span />
  </button>

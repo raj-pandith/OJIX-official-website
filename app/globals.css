@@ -113,7 +113,7 @@ nav.scrolled {
   text-decoration: none;
 }
 .logo .bar { width: 4px; height: 22px; background: var(--color-orange); border-radius: 1px; }
-.nav-logo-img { height: clamp(36px, 5vw, 52px); width: auto; object-fit: contain; }
+.nav-logo-img { height: clamp(44px, 6vw, 60px); width: auto; object-fit: contain; }
 .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
 .nav-links a {
   font: 500 13px 'Roboto'; letter-spacing: 0.08em; text-transform: uppercase;
