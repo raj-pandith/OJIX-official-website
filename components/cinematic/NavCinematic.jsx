@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 const LINKS = [
  ["01", "Capabilities", "#services"],
  ["02", "Sectors", "#industries"],
-//  ["03", "Team", "#team"],
+// ["03", "Team", "#team"],
  ["03", "Process", "#process"],
  ["04", "Stack", "#techstack"],
  ["05", "Contact", "#contact"],
@@ -13,31 +13,46 @@ const LINKS = [
 export default function NavCinematic({ ready }) {
  const [scrolled, setScrolled] = useState(false);
  const [open, setOpen] = useState(false);
- const [activeHash, setActiveHash] = useState("");
+ const [activeId, setActiveId] = useState("");
  const observerRef = useRef(null);
- const isClickNavigating = useRef(false);
+ const pendingTargetRef = useRef(null);
+
+ // Build a map of section id → link index for quick lookup
+ const sectionIds = LINKS.map(([, , hash]) => hash.replace("#", ""));
 
  // Observe sections to update the active navlink on scroll
  useEffect(() => {
- const sections = LINKS.map(([, , hash]) => document.querySelector(hash)).filter(Boolean);
+ const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+ if (!sections.length) return;
 
  const handler = (entries) => {
- if (isClickNavigating.current) return;
+ // If a click navigation is pending, only accept the entry that matches
+ // the pending target so the observer "locks on" and then hands control back.
+ const pending = pendingTargetRef.current;
 
- // Pick the entry that's most in view (highest intersection ratio)
- let best = entries[0];
- for (const entry of entries) {
- if ((entry.intersectionRatio ?? 0) > (best?.intersectionRatio ?? 0)) best = entry;
+ let best = null;
+ if (pending) {
+ best = entries.find((e) => e.target.id === pending);
+ if (best) {
+ pendingTargetRef.current = null; // lock-on complete, resume normal updates
+ }
+ }
+
+ if (!best) {
+ // No pending target — pick whichever section is most visible
+ best = entries.reduce((a, b) =>
+ (b.intersectionRatio ?? 0) > (a.intersectionRatio ?? 0) ? b : a
+ , entries[0]);
  }
 
  if (best?.isIntersecting || (best?.intersectionRatio ?? 0) > 0) {
- setActiveHash(best.target.id);
+ setActiveId(best.target.id);
  }
  };
 
  observerRef.current = new IntersectionObserver(handler, {
- rootMargin: "-40% 0px -40% 0px",
- threshold: 0,
+ rootMargin: "-30% 0px -60% 0px",
+ threshold: [0, 0.25, 0.5, 1],
  });
 
  sections.forEach((s) => observerRef.current.observe(s));
@@ -45,29 +60,29 @@ export default function NavCinematic({ ready }) {
  // Set initial active section if one is already in view on load
  const initial = sections.find((s) => {
  const rect = s.getBoundingClientRect();
- return rect.top < window.innerHeight * 0.6 && rect.bottom > window.innerHeight * 0.4;
+ return rect.top < window.innerHeight * 0.5 && rect.bottom > window.innerHeight * 0.3;
  });
- if (initial) setActiveHash(initial.id);
+ if (initial) setActiveId(initial.id);
 
  return () => observerRef.current?.disconnect();
- }, []);
+ }, [sectionIds]);
 
  const handleNavClick = useCallback(
  (e, hash) => {
- const target = document.querySelector(hash);
+ const target = document.getElementById(hash.replace("#", ""));
  if (!target) return;
 
  e.preventDefault();
 
- // Immediately set this link as active
- setActiveHash(hash.replace("#", ""));
+ // Immediately set this link as active and mark the pending target
+ const id = hash.replace("#", "");
+ setActiveId(id);
+ pendingTargetRef.current = id;
 
  // Smooth-scroll via Lenis when available, fall back to native
  const lenis = typeof window !== "undefined" ? window.__lenis : null;
  if (lenis?.scrollTo) {
- isClickNavigating.current = true;
  lenis.scrollTo(target, { offset: 0 });
- setTimeout(() => { isClickNavigating.current = false; }, 1200);
  } else {
  target.scrollIntoView({ behavior: "smooth" });
  }
@@ -95,7 +110,7 @@ export default function NavCinematic({ ready }) {
  <ul className="nav-links">
  {LINKS.map(([n, l, h]) => {
  const id = h.replace("#", "");
- const isActive = activeHash === id;
+ const isActive = activeId === id;
  return (
  <li key={h}>
  <a

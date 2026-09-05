@@ -536,9 +536,8 @@ footer { border-top: 1px solid var(--color-border); padding: 8vh var(--content-p
   .nav-links { gap: 18px; }
   .nav-links a { font-size: 11px; letter-spacing: 0.08em; }
   .nav-cta { padding: 9px 16px; font-size: 11px; }
-  .stat { border-left: none; padding-left: 0; border-top: 1px solid var(--color-border); padding-top: 24px; }
-  .stat:nth-child(2) { border-top: none; padding-top: 0; }
-  .stats-grid > .stat:nth-child(3) { border-top: 1px solid var(--color-border); padding-top: 24px; }
+  .stat { border-left: none; padding-left: 0; border-top: none; padding-top: 0px; }
+ .stat:first-child { border-top: none; padding-top: 0; }
  .team-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
