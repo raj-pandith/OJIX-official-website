@@ -10,8 +10,8 @@ import TechParticles from "./TechParticles";
 import TechConnection from "./TechConnection";
 import { technologies, orbits } from "./techData";
 
-const ZOOM_IN_POS = new THREE.Vector3(0, 5, 14);
-const ZOOM_OUT_POS = new THREE.Vector3(0, 5, 42);
+const ZOOM_IN_POS = new THREE.Vector3(0, 5, 20);
+const ZOOM_OUT_POS = new THREE.Vector3(0, 5, 100);
 
 function CameraZoom({ isVisible, userInteracting }) {
  const { camera } = useThree();
@@ -19,7 +19,7 @@ function CameraZoom({ isVisible, userInteracting }) {
  useFrame(() => {
  if (userInteracting.current) return;
  const target = isVisible ? ZOOM_IN_POS : ZOOM_OUT_POS;
- camera.position.lerp(target, 0.04);
+ camera.position.lerp(target, 0.10);
  });
 
  return null;
@@ -122,7 +122,7 @@ export default function TechStack3D() {
  return (
  <div className="tech-stack-3d-container">
  <Canvas
- camera={{ position: [0, 5, 42], fov: 50 }}
+ camera={{ position: [0, 5, 100], fov: 50 }}
  gl={{
  antialias: true,
  alpha: true,
@@ -142,7 +142,7 @@ export default function TechStack3D() {
  enableZoom
  enablePan
  minDistance={8}
-  maxDistance={42}
+  maxDistance={100}
  maxPolarAngle={Math.PI / 2}
  minPolarAngle={Math.PI / 6}
  onStart={() => { userInteracting.current = true; }}
