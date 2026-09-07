@@ -1,4 +1,5 @@
 "use client";
+import { useState, useRef, useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { SITE } from "@/lib/seo";
 
@@ -39,6 +40,16 @@ const MAP_ADDRESS = encodeURIComponent(SITE.location.address || "Ranga Rao Rd, S
 
 export default function FooterCinematic() {
  const reduced = useReducedMotion();
+ const lineRef = useRef(null);
+ const [lineVisible, setLineVisible] = useState(false);
+
+ useEffect(() => {
+ if (reduced) { setLineVisible(true); return; }
+ const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setLineVisible(true); obs.disconnect(); } }, { threshold: 0.1 });
+ if (lineRef.current) obs.observe(lineRef.current);
+ return () => obs.disconnect();
+ }, [reduced]);
+
  return (
  <footer>
  {/* ===== TOP: CONTACT + MAP ===== */}
@@ -150,13 +161,12 @@ export default function FooterCinematic() {
  aria-hidden
  >
  <div className="foot-big">
- <div className="foot-line">
+ <div className="foot-line" ref={lineRef}>
  <motion.div
  initial={{ scaleX: 0 }}
- whileInView={{ scaleX: 1 }}
- viewport={{ once: true }}
+ animate={{ scaleX: lineVisible ? 1 : 0 }}
  transition={{ duration: reduced ? 0 : 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
- className="foot-line-inner"
+ className={"foot-line-inner" + (lineVisible ? " visible" : "")}
  />
  </div>
  {["O", "J", "I", "X"].map((char, i) => (
