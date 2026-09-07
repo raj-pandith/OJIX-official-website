@@ -429,6 +429,24 @@ h2.sec .cyan { color: var(--color-accent-2); }
 .contact .small a { color: var(--color-accent); text-decoration: none; }
 .contact .small a:hover { text-decoration: underline; }
 
+/* Contact detail icons */
+.ic-xs {
+ width: 16px; height: 16px;
+ display: inline-flex; align-items: center; justify-content: center;
+ color: var(--color-accent); flex-shrink: 0;
+}
+.ic-xs svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 1.25; fill: none; }
+
+/* Social / footer link icons */
+.foot-link-icon {
+ width: 14px; height: 14px;
+ display: inline-flex; align-items: center; justify-content: center;
+ color: var(--color-fg-3); flex-shrink: 0;
+ transition: color 250ms ease;
+}
+.foot-col a:hover .foot-link-icon { color: var(--color-accent); }
+.foot-link-icon svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 1.25; fill: none; }
+
 /* ============================================================
  FOOTER
  ============================================================ */
