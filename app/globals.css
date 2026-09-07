@@ -136,8 +136,8 @@ nav.scrolled {
  text-decoration: none;
 }
 .logo .nav-logo-img {
- max-height: 32px;
- max-width: 130px;
+ max-height: 36px;
+ max-width: 145px;
  width: auto;
  height: auto;
  object-fit: contain;
@@ -623,7 +623,7 @@ footer { border-top: 1px solid var(--color-border); padding: 0; background: var(
  .burger { display: flex; }
  .nav-cta { padding: 9px 14px; font-size: 11px; display: none; }
   .logo .tag { display: none; }
- .logo .nav-logo-img { max-height: clamp(48px, 10vw, 64px); max-width: 140px; }
+ .logo .nav-logo-img { max-height: clamp(32px, 7vw, 48px); max-width: 120px; }
   .shell, .shell-wide { padding: 10vh var(--content-pad); }
   .thesis { padding: 12vh var(--content-pad); }
   .contact { padding: 10vh var(--content-pad); }
