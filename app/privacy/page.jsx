@@ -1,6 +1,6 @@
 import { Roboto } from "next/font/google";
 import Link from "next/link";
-import "../cinematic/globals-cinematic.css";
+import "../globals.css";
 
 const roboto = Roboto({
  subsets: ["latin"],
@@ -17,7 +17,7 @@ export const metadata = {
 const SECTIONS = [
  {
  title: "1. Who we are",
- body: `OJIX ("we", "us", "our") is a software product studio registered in Bengaluru, India. We operate the websites ojix.com and the cinematic sub-site at ojix.com/cinematic. You can contact us at hello@ojix.com.`,
+ body: `OJIX ("we", "us", "our") is a software product studio registered in Bengaluru, India. We operate ojix.com. You can contact us at hello@ojix.com.`,
  },
  {
  title: "2. What information we collect",
@@ -99,15 +99,8 @@ export default function PrivacyPage() {
  <span style={s.logoText}>OJIX</span>
  </Link>
  <nav style={s.nav}>
- {[
- ["/", "Home"],
- ["/cinematic", "Cinematic"],
- ["/terms", "Terms"],
- ].map(([href, label]) => (
- <Link key={href} href={href} style={s.navLink}>
- {label}
- </Link>
- ))}
+ <a href="/" style={s.navLink}>Home</a>
+ <a href="/terms" style={s.navLink}>Terms</a>
  </nav>
  </div>
  </header>
@@ -131,12 +124,10 @@ export default function PrivacyPage() {
 
  <footer style={s.footer}>
  <div style={s.footerInner}>
- <span>© 2026 OJIX. All rights reserved.</span>
+ <span>2026 OJIX. All rights reserved.</span>
  <span>Bengaluru, India</span>
  </div>
  </footer>
-
- <style>{s.global}</style>
  </div>
  );
 }

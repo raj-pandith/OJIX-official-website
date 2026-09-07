@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import SmoothScroll from "../SmoothScroll";
+import SmoothScroll from "./SmoothScroll";
 import PreloaderCinematic from "./PreloaderCinematic";
-import Cursor from "../Cursor";
+import Cursor from "./Cursor";
 import NavCinematic from "./NavCinematic";
 import HeroCinematic from "./HeroCinematic";
 import ServicesCinematic from "./ServicesCinematic";
