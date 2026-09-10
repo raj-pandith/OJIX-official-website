@@ -154,6 +154,7 @@ export default function RootLayout({ children }) {
  return (
  <html lang="en" className="dark">
  <body>
+ <link rel="icon" href="/ojix-favicon.svg" type="image/svg+xml" />
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
  <div
  className={`${interTight.variable} ${inter.variable} ${jetbrains.variable}`}
