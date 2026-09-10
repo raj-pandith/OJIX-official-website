@@ -560,6 +560,7 @@ footer { border-top: 1px solid var(--color-border); padding: 0; background: var(
    ============================================================ */
 .preloader { position: fixed; inset: 0; z-index: 9500; background: var(--color-bg); display: flex; align-items: center; justify-content: center; flex-direction: column; }
 .pre-logo { font: 500 clamp(40px, 7vw, 72px) 'Inter Tight', 'Inter', sans-serif; color: var(--color-fg); letter-spacing: 0.4em; text-indent: 0.4em; display: flex; overflow: hidden; }
+.pre-logo-img { width: clamp(100px, 18vw, 180px); height: auto; }
 .pre-logo span { display: inline-block; transform: translateY(110%); }
 .pre-logo .dot { color: var(--color-accent); text-indent: 0; }
 .pre-meta { margin-top: 26px; display: flex; justify-content: space-between; width: min(420px, 70vw);
@@ -712,6 +713,7 @@ footer { border-top: 1px solid var(--color-border); padding: 0; background: var(
   .cform { padding: 20px 16px; }
   .foot-big { font-size: 60px; }
   .pre-logo { font-size: 36px; }
+ .pre-logo-img { width: clamp(72px, 28vw, 110px); }
   .pre-meta, .pre-bar, .pre-log { width: min(320px, 84vw); }
 }
 
