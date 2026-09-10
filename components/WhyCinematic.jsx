@@ -56,7 +56,7 @@ export default function WhyCinematic() {
       <div className="shell" style={{paddingBottom:0}}>
         <div className="section-head">
           <div style={{ "display": "flex", flexDirection: "column", height: "100%", position: "relative", top: "2rem" }}>
-            <span className="sec-num"> // WHY OJIX</span>
+            {/* <span className="sec-num"> // WHY OJIX</span> */}
             <p className="label">Why OJIX</p>
           </div>
           <div>
