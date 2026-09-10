@@ -15,14 +15,14 @@ function CameraController({ isMobile, isInView, userInteracting }) {
  const { camera } = useThree();
  const targetRef = useRef(
  isMobile
- ? new THREE.Vector3(0, 3, 18)
+ ? new THREE.Vector3(0, 2, 26)
  : new THREE.Vector3(0, 5, 100)
  );
  const lerpSpeed = useRef(0.06);
 
  useEffect(() => {
  if (isMobile) {
- targetRef.current.set(0, 3, 18);
+ targetRef.current.set(0, 2, 26);
  } else {
  targetRef.current.set(0, 5, 100);
  if (isInView) {

@@ -1614,14 +1614,21 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 
 
 @media (max-width: 768px) {
+ .techstack-section {
+ overflow: visible;
+ }
+
  .tech-stack-3d-wrapper.mobile-fullscreen {
+ width: 100vw;
+ margin-left: -50vw;
+ position: relative;
+ left: 50%;
+ transform: translateY(-15%);
  height: 75vh;
  display: flex;
  align-items: center;
  justify-content: center;
- transform: translateY(-15%);
- margin-left: -20px;
- margin-right: -20px;
+ overflow: visible;
  }
 
  .tech-stack-3d-wrapper.mobile-fullscreen canvas {
