@@ -26,6 +26,7 @@ export default function ExperienceCinematic() {
  <div className="scanlines" aria-hidden />
  <div className="vignette" aria-hidden />
  <Cursor />
+ 
  <AnimatePresence>{!loaded && <PreloaderCinematic key="pre" onDone={() => setLoaded(true)} />}</AnimatePresence>
  <NavCinematic ready={loaded} />
  <main id="main" style={{ position: "relative", zIndex: 1 }}>
