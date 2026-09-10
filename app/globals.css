@@ -640,7 +640,7 @@ footer { border-top: 1px solid var(--color-border); padding: 0; background: var(
   .nav-cta .arr { display: none; }
   .burger { width: 40px; height: 40px; }
 
-  .hero { padding: 140px 16px 60px; min-height: 92svh; }
+  .hero { padding: 120px 16px 40px; min-height: auto; }
   .hero-meta { top: 72px; gap: 8px 16px; flex-wrap: wrap; font-size: 9px; letter-spacing: 0.14em; }
   .hero-meta .left, .hero-meta .right { gap: 12px; flex-wrap: wrap; }
   .hero h1 { font-size: clamp(34px, 11vw, 48px); line-height: 0.98; margin-bottom: 24px; letter-spacing: -0.04em; }
@@ -659,10 +659,10 @@ footer { border-top: 1px solid var(--color-border); padding: 0; background: var(
  .projects-head { flex-direction: column; align-items: flex-start; gap: 12px; }
  .view-all-link { align-self: flex-start; }
  .process-arrow { display: none; }
- .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; padding: 8vh var(--content-pad); }
- .stat { min-height: 140px; }
+ .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; padding: 28px var(--content-pad); }
+ .stat { min-height: auto; padding: 12px 0; }
 
-  .shell, .shell-wide { padding: 8vh 16px; }
+  .shell, .shell-wide { padding: 6vh 16px; }
   .thesis { padding: 10vh 16px; }
   .contact { padding: 8vh 16px; }
 
@@ -672,6 +672,7 @@ footer { border-top: 1px solid var(--color-border); padding: 0; background: var(
   .sec-sub { font-size: 16px; margin-top: 16px; }
 
   .svc-grid, .ind-grid, .frow { grid-template-columns: 1fr; }
+ .svc-grid { margin-top: 32px; }
   .svc { min-height: auto; padding: 28px 24px; }
   .svc h3 { font-size: 22px; }
   .ind { min-height: auto; padding: 28px 24px; }
@@ -683,8 +684,8 @@ footer { border-top: 1px solid var(--color-border); padding: 0; background: var(
   .stack-card h3 { font-size: 26px; }
   .stack-card p { font-size: 15px; }
 
- .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; padding: 8vh var(--content-pad); }
- .stat { min-height: 140px; }
+ .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; padding: 28px var(--content-pad); }
+ .stat { min-height: auto; padding: 12px 0; }
 
   .cform { padding: 24px 20px; gap: 16px; }
   .ff input, .ff select, .ff textarea { font-size: 16px; padding: 14px 14px; min-height: 50px; }
