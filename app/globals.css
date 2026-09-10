@@ -713,7 +713,7 @@ footer { border-top: 1px solid var(--color-border); padding: 0; background: var(
   .cform { padding: 20px 16px; }
   .foot-big { font-size: 60px; }
   .pre-logo { font-size: 36px; }
- .pre-logo-img { width: clamp(72px, 28vw, 110px); }
+ .pre-logo-img { width: clamp(72px, 40vw, 143px); }
   .pre-meta, .pre-bar, .pre-log { width: min(320px, 84vw); }
 }
 
